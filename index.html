@@ -320,6 +320,85 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
 .cp-tab.active{background:var(--goldf);border-color:var(--gold);color:var(--gold)}
 #transfer-btn{position:fixed;bottom:22px;left:280px;background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:50px;padding:9px 16px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:12px;cursor:pointer;z-index:998}
 #transfer-btn:hover{border-color:var(--border2);color:var(--text)}
+
+/* ── ILMI TABS ── */
+.ilmi-tabs{display:flex;gap:6px;margin-bottom:16px}
+.ilmi-tab{flex:1;padding:9px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:13px;cursor:pointer;transition:all .2s;text-align:center}
+.ilmi-tab.active{background:var(--goldf);border-color:var(--gold);color:var(--gold);font-weight:500}
+.ilmi-tab.shari.active{background:rgba(201,162,39,0.1);border-color:var(--gold);color:var(--gold)}
+.ilmi-tab.donyawi.active{background:rgba(45,125,210,0.1);border-color:#2d7dd2;color:#2d7dd2}
+/* ── ILMI SECTIONS ── */
+.ilmi-sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.ilmi-sec-hdr{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.ilmi-sec-icon{font-size:14px;opacity:.7}
+.ilmi-sec-title{font-size:12px;font-weight:500;color:var(--text2);letter-spacing:1px;flex:1}
+.ilmi-sec-body{padding:14px 16px}
+/* ── MASARA CARD ── */
+.masara-card{background:var(--bg3);border:1px solid var(--border);border-right:3px solid #c9a227;border-radius:10px;margin-bottom:10px}
+.masara-hdr{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer}
+.masara-arrow{font-size:11px;color:var(--text3);transition:transform .2s}
+.masara-arrow.open{transform:rotate(90deg)}
+.masara-name{font-size:14px;font-weight:500;flex:1}
+.masara-pct{font-size:11px;color:var(--text3)}
+.masara-body{padding:4px 14px 12px;border-top:1px solid var(--border);display:none}
+.masara-body.open{display:block}
+/* ── PROGRAM CARD ── */
+.prog-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;padding:12px 14px}
+.prog-name{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.prog-subject{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;cursor:pointer;transition:background .15s;font-size:13px;color:var(--text)}
+.prog-subject:hover{background:rgba(255,255,255,0.03)}
+.prog-subject.done-s{color:var(--text3);text-decoration:line-through}
+/* ── FAWAIT TRACKER ── */
+.fawait-card{background:linear-gradient(135deg,rgba(196,80,40,0.06),rgba(201,162,39,0.03));border:1px solid rgba(196,80,40,0.18);border-radius:12px;padding:18px;margin-bottom:12px}
+.fawait-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px}
+.fawait-sub{font-size:11px;color:var(--text3);margin-bottom:14px}
+.fawait-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.fawait-stat{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center}
+.fawait-stat-n{font-size:22px;font-weight:600;color:var(--gold);font-family:"Amiri",serif}
+.fawait-stat-l{font-size:10px;color:var(--text3);margin-top:2px}
+.fawait-stat.green .fawait-stat-n{color:#1a8f68}
+.fawait-stat.coral .fawait-stat-n{color:#c45028}
+.fawait-btns{display:flex;gap:8px;flex-wrap:wrap}
+.fawait-btn{padding:7px 14px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:12px;cursor:pointer;transition:all .2s}
+.fawait-btn.plus{border-color:rgba(26,143,104,0.4);color:#1a8f68}
+.fawait-btn.plus:hover{background:rgba(26,143,104,0.08)}
+.fawait-btn.minus{border-color:rgba(196,80,40,0.3);color:#c45028}
+.fawait-btn.minus:hover{background:rgba(196,80,40,0.06)}
+.fawait-edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;display:none}
+.fawait-edit-grid.open{display:grid}
+.fawait-fi{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:7px 10px;color:var(--text);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:13px;outline:none;text-align:center}
+.fawait-fi-label{font-size:10px;color:var(--text3);margin-bottom:4px}
+
+/* ── ARTICLES ── */
+.article-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.article-card:hover{border-color:var(--border2)}
+.article-hdr{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+.article-arrow{font-size:11px;color:var(--text3);transition:transform .25s;flex-shrink:0}
+.article-arrow.open{transform:rotate(90deg)}
+.article-title{font-family:"Amiri",serif;font-size:16px;color:var(--text);flex:1;line-height:1.4}
+.article-meta{font-size:10px;color:var(--text3);flex-shrink:0}
+.article-del{background:none;border:none;color:rgba(255,255,255,0.1);cursor:pointer;font-size:12px;padding:2px 6px;flex-shrink:0}
+.article-del:hover{color:rgba(200,80,80,0.6)}
+.article-body{display:none;padding:0 18px 18px;border-top:1px solid rgba(201,162,39,0.08)}
+.article-body.open{display:block}
+.article-content{font-family:"Amiri",serif;font-size:16px;line-height:2.2;color:rgba(226,217,200,0.85);padding-top:14px;white-space:pre-wrap}
+.article-edit-area{width:100%;background:rgba(201,162,39,0.03);border:1px solid rgba(201,162,39,0.15);border-radius:8px;color:var(--text);font-family:"Amiri",serif;font-size:15px;line-height:2;resize:none;outline:none;direction:rtl;padding:12px;margin-top:10px}
+.article-edit-title{width:100%;background:rgba(201,162,39,0.03);border:1px solid rgba(201,162,39,0.15);border-radius:6px;color:var(--text);font-family:"Amiri",serif;font-size:15px;padding:8px 12px;direction:rtl;outline:none;margin-bottom:8px}
+
+/* ── ARTICLE TAGS ── */
+.art-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.art-tag{font-size:10px;padding:2px 9px;border-radius:50px;background:rgba(201,162,39,0.1);color:rgba(201,162,39,0.7);border:1px solid rgba(201,162,39,0.2)}
+.art-tag.tadabbur{background:rgba(45,125,210,0.1);color:rgba(45,125,210,0.8);border-color:rgba(45,125,210,0.2)}
+.art-tag.maqal{background:rgba(26,143,104,0.1);color:rgba(26,143,104,0.8);border-color:rgba(26,143,104,0.2)}
+.tag-filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tag-filter-btn{font-size:11px;padding:4px 12px;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--text2);cursor:pointer;transition:all .2s;font-family:"IBM Plex Sans Arabic",sans-serif}
+.tag-filter-btn.active{background:var(--goldf);border-color:var(--gold);color:var(--gold)}
+
+/* ── MIHANI TASKS ── */
+.task-row{display:flex;align-items:flex-start;gap:10px;padding:9px 11px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:3px}
+.task-row:hover{background:var(--bg3)}
+.task-row.done-task{background:var(--bg3);opacity:.6}
+.task-row.done-task .goal-txt{text-decoration:line-through;color:var(--text3)}
 </style>
 </head>
 <body>
@@ -359,6 +438,48 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
   <div class="primary-hdr">
     <div class="primary-badge">★ المحور الأساسي</div>
     <div class="primary-title">الديني والتزكوي</div>
+  </div>
+
+  <div class="fawait-card">
+    <div class="fawait-title">قضاء الفوائت</div>
+    <div class="fawait-sub">تتبع صلوات القضاء</div>
+
+    <div class="fawait-stats">
+      <div class="fawait-stat green">
+        <div class="fawait-stat-n" id="fw-done">0</div>
+        <div class="fawait-stat-l">قُضيت</div>
+      </div>
+      <div class="fawait-stat coral">
+        <div class="fawait-stat-n" id="fw-remain">0</div>
+        <div class="fawait-stat-l">متبقية</div>
+      </div>
+      <div class="fawait-stat">
+        <div class="fawait-stat-n" id="fw-days">—</div>
+        <div class="fawait-stat-l">يوم متبقي</div>
+      </div>
+    </div>
+
+    <div class="prog-outer" style="height:6px;margin-bottom:12px">
+      <div class="prog-fill gold-fill" id="fw-bar" style="width:0%"></div>
+    </div>
+
+    <div class="fawait-edit-grid" id="fw-edit-grid">
+      <div>
+        <div class="fawait-fi-label">إجمالي الفوائت</div>
+        <input class="fawait-fi" id="fw-total-input" type="number" min="0" placeholder="عدد الصلوات الكلية">
+      </div>
+      <div>
+        <div class="fawait-fi-label">صلوات القضاء يومياً</div>
+        <input class="fawait-fi" id="fw-daily-input" type="number" min="1" max="20" placeholder="كم صلاة في اليوم">
+      </div>
+      <button class="fi-save" style="grid-column:1/-1" onclick="fawaitSaveSettings()">حفظ الإعدادات</button>
+    </div>
+
+    <div class="fawait-btns">
+      <button class="fawait-btn plus" onclick="fawaitAdd(1)">✓ قضيت صلاة</button>
+      <button class="fawait-btn minus" onclick="fawaitAdd(-1)">↩</button>
+      <button class="fawait-btn ef-ta" onclick="fawaitToggleEdit()" style="border-color:var(--border);color:var(--text3)">⚙ إعدادات</button>
+    </div>
   </div>
 
   <div class="card">
@@ -415,6 +536,7 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
 
 <!-- PANEL: العلمي -->
 <div class="panel" id="panel-ilmi">
+
   <div class="status-grid">
     <div class="status-card now">
       <div class="sc-label"><span class="sc-dot-g"></span>أين أنا الآن</div>
@@ -434,74 +556,104 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
     </div>
   </div>
 
-  <!-- ── البناء المنهجي ── -->
-  <div class="bm-wrap">
-    <div class="bm-title">البناء المنهجي</div>
-    <div class="bm-sub">المنهج العلمي المنظم في العلوم الشرعية والعربية</div>
-    <div id="bm-prog-row" class="prog-row" style="margin-bottom:12px"></div>
-    <div id="bm-topics"></div>
-    <div id="bm-topic-form" class="inline-form">
-      <div class="form-row">
-        <input class="fi" id="new-bm-topic" placeholder="موضوع أو باب أو مسألة...">
-      </div>
-      <div style="display:flex;gap:8px">
-        <button class="fi-save" onclick="addBMTopic()">إضافة</button>
-        <button class="fi-cancel" onclick="closeForm('bm-topic-form')">إلغاء</button>
-      </div>
-    </div>
-    <button class="add-btn" onclick="openForm('bm-topic-form')">+ إضافة موضوع</button>
-    <textarea class="bm-notes" id="bm-notes" rows="3" placeholder="ملاحظات عامة على المنهج..." oninput="saveBMNotes()"></textarea>
+  <div class="ilmi-tabs">
+    <button class="ilmi-tab shari active" onclick="switchIlmiTab('shari')">🕌 الجانب الشرعي</button>
+    <button class="ilmi-tab donyawi" onclick="switchIlmiTab('donyawi')">🌐 الجانب الدنيوي</button>
   </div>
 
-  <!-- ── طليعة الكافية ── -->
-  <div class="bm-wrap" style="border-right-color:#7c5cbf;border-color:rgba(124,92,191,0.2)">
-    <div class="bm-title" style="color:#7c5cbf">طليعة الكافية</div>
-    <div class="bm-sub">مدخل إلى الكافية في النحو — ابن الحاجب</div>
-    <div id="tk-prog-row" class="prog-row" style="margin-bottom:12px"></div>
-    <div id="tk-topics"></div>
-    <div id="tk-topic-form" class="inline-form">
-      <div class="form-row">
-        <input class="fi" id="new-tk-topic" placeholder="باب أو موضوع...">
-      </div>
-      <div style="display:flex;gap:8px">
-        <button class="fi-save" onclick="addTKTopic()">إضافة</button>
-        <button class="fi-cancel" onclick="closeForm('tk-topic-form')">إلغاء</button>
-      </div>
-    </div>
-    <button class="add-btn" onclick="openForm('tk-topic-form')">+ إضافة موضوع</button>
-    <textarea class="bm-notes" id="tk-notes" rows="3" placeholder="ملاحظات..." oninput="saveTKNotes()"></textarea>
-  </div>
+  <div id="ilmi-tab-content"></div>
 
-  <div id="ilmi-domains"></div>
-  <div id="ilmi-domain-form" class="inline-form">
-    <div class="form-row"><input class="fi" id="new-domain-name" placeholder="اسم المجال..."></div>
-    <div class="color-pick" id="cpick">
-      <div class="cdot sel" style="background:#c9a227" data-c="#c9a227" onclick="pickColor(this)"></div>
-      <div class="cdot" style="background:#1a8f68" data-c="#1a8f68" onclick="pickColor(this)"></div>
-      <div class="cdot" style="background:#2d7dd2" data-c="#2d7dd2" onclick="pickColor(this)"></div>
-      <div class="cdot" style="background:#7c5cbf" data-c="#7c5cbf" onclick="pickColor(this)"></div>
-      <div class="cdot" style="background:#c45028" data-c="#c45028" onclick="pickColor(this)"></div>
-    </div>
+  <!-- Shared forms -->
+  <div id="ilmi-masara-form" class="inline-form" data-side="" data-masara="">
+    <div class="form-row"><input class="fi" id="new-masara-topic" placeholder="موضوع أو باب..."></div>
     <div style="display:flex;gap:8px">
-      <button class="fi-save" onclick="addDomain()">إضافة</button>
-      <button class="fi-cancel" onclick="closeForm('ilmi-domain-form')">إلغاء</button>
+      <button class="fi-save" onclick="addMasaraTopic()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-masara-form')">إلغاء</button>
     </div>
   </div>
-  <button class="add-btn" onclick="openForm('ilmi-domain-form')">+ إضافة علم أو مجال</button>
-  <div id="ilmi-skill-form" class="inline-form" data-domain="">
+
+  <div id="ilmi-prog-form" class="inline-form" data-side="">
+    <div class="form-row"><input class="fi" id="new-prog-name" placeholder="اسم البرنامج أو المسار الأكاديمي"></div>
+    <div style="display:flex;gap:8px">
+      <button class="fi-save" onclick="addProgram()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-prog-form')">إلغاء</button>
+    </div>
+  </div>
+
+  <div id="ilmi-subj-form" class="inline-form" data-side="" data-prog="">
+    <div class="form-row"><input class="fi" id="new-subj-name" placeholder="اسم المادة أو الموضوع"></div>
+    <div style="display:flex;gap:8px">
+      <button class="fi-save" onclick="addSubject()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-subj-form')">إلغاء</button>
+    </div>
+  </div>
+
+  <div id="ilmi-sci-form" class="inline-form" data-side="">
     <div class="form-row">
-      <input class="fi" id="new-skill-name" placeholder="عنوان المهارة أو المادة">
-      <input class="fi" id="new-skill-det" placeholder="تفاصيل (اختياري)">
+      <input class="fi" id="new-sci-name" placeholder="اسم العلم أو المعرفة">
+      <div style="display:flex;gap:6px;align-items:center" id="sci-cpick">
+        <div class="cdot sel" style="background:#c9a227" data-c="#c9a227" onclick="pickSciColor(this)"></div>
+        <div class="cdot" style="background:#1a8f68" data-c="#1a8f68" onclick="pickSciColor(this)"></div>
+        <div class="cdot" style="background:#2d7dd2" data-c="#2d7dd2" onclick="pickSciColor(this)"></div>
+        <div class="cdot" style="background:#7c5cbf" data-c="#7c5cbf" onclick="pickSciColor(this)"></div>
+        <div class="cdot" style="background:#c45028" data-c="#c45028" onclick="pickSciColor(this)"></div>
+      </div>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="fi-save" onclick="addSkill()">إضافة</button>
-      <button class="fi-cancel" onclick="closeForm('ilmi-skill-form')">إلغاء</button>
+      <button class="fi-save" onclick="addScience()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-sci-form')">إلغاء</button>
     </div>
   </div>
+
+  <div id="ilmi-skill-form2" class="inline-form" data-side="" data-sci="">
+    <div class="form-row">
+      <input class="fi" id="new-skill2-name" placeholder="مهارة أو جانب">
+      <select class="fi" id="new-skill2-lv">
+        <option value="1">أساسي</option><option value="2">متوسط</option>
+        <option value="3" selected>متقدم</option><option value="4">خبير</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="fi-save" onclick="addSciSkill()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-skill-form2')">إلغاء</button>
+    </div>
+  </div>
+
+  <div id="ilmi-new-masara-form" class="inline-form" data-side="">
+    <div class="form-row">
+      <input class="fi" id="new-masara-name" placeholder="اسم المسار العلمي">
+      <div style="display:flex;gap:6px;align-items:center" id="masara-cpick">
+        <div class="cdot sel" style="background:#c9a227" data-c="#c9a227" onclick="pickMasaraColor(this)"></div>
+        <div class="cdot" style="background:#1a8f68" data-c="#1a8f68" onclick="pickMasaraColor(this)"></div>
+        <div class="cdot" style="background:#2d7dd2" data-c="#2d7dd2" onclick="pickMasaraColor(this)"></div>
+        <div class="cdot" style="background:#7c5cbf" data-c="#7c5cbf" onclick="pickMasaraColor(this)"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="fi-save" onclick="addNewMasara()">إضافة</button>
+      <button class="fi-cancel" onclick="closeForm('ilmi-new-masara-form')">إلغاء</button>
+    </div>
+  </div>
+
 </div>
 
-<!-- PANEL: المهني -->
 <div class="panel" id="panel-mihani">
+
+  <!-- ── مهام ── -->
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-label">مهام — خطوات الانطلاق</div>
+    <div id="mihani-tasks-list"></div>
+    <div id="mihani-task-form" class="inline-form">
+      <div class="form-row">
+        <input class="fi" id="new-mtask" placeholder="مهمة جديدة...">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="fi-save" onclick="addMTask()">إضافة</button>
+        <button class="fi-cancel" onclick="closeForm('mihani-task-form')">إلغاء</button>
+      </div>
+    </div>
+    <button class="add-btn" onclick="openForm('mihani-task-form')">+ إضافة مهمة</button>
+  </div>
 
   <!-- ── بروفايلي المهني ── -->
   <div class="prof-card" id="prof-card">
@@ -716,6 +868,23 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
     <button class="add-btn" onclick="openForm('sirah-form')">+ إضافة سيرة</button>
   </div>
 
+
+  <div class="motiv-sec">
+    <div class="motiv-label">ملاحظاتي ومقالاتي</div>
+    <div class="tag-filter" id="art-tag-filter"></div>
+    <div id="articles-list"></div>
+    <div id="article-form" class="inline-form">
+      <input class="article-edit-title" id="new-art-title" placeholder="عنوان المقال أو الملاحظة...">
+      <textarea class="article-edit-area" id="new-art-content" rows="5" placeholder="اكتب هنا..."></textarea>
+      <input class="article-edit-title" id="new-art-tags" placeholder="وسوم: تدبر، مقال، فكرة (افصل بفاصلة)..." style="font-family:IBM Plex Sans Arabic,sans-serif;font-size:13px;margin-top:4px">
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="fi-save" onclick="addArticle()">إضافة</button>
+        <button class="fi-cancel" onclick="closeForm('article-form')">إلغاء</button>
+      </div>
+    </div>
+    <button class="add-btn" onclick="openForm('article-form')">+ إضافة مقال أو ملاحظة</button>
+  </div>
+
   <div class="motiv-sec">
     <div class="motiv-label">ما أسعى إليه</div>
     <div id="aspir-list"></div>
@@ -848,8 +1017,8 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
 // ═══════════════════════════════════════════
 const TABS = [
   {id:'deen',    label:'الديني والتزكوي', primary:true,  fill:'gold-fill'},
-  {id:'ilmi',    label:'العلمي',          primary:false, fill:'purple-fill'},
   {id:'mihani',  label:'المهني',          primary:false, fill:'green-fill'},
+  {id:'ilmi',    label:'العلمي',          primary:false, fill:'purple-fill'},
   {id:'badani',  label:'البدني',          primary:false, fill:'coral-fill'},
   {id:'asri',    label:'الأسري',          primary:false, fill:'blue-fill'},
   {id:'mubsarat',label:'المبصرات',        primary:false, fill:'gold-fill'},
@@ -870,10 +1039,8 @@ const STATIC_GOALS = {
   badani:[
     {id:'b1',text:'جيم ٤ مرات أسبوعياً — مستمر',period:'مستمر'},
     {id:'b2',text:'كيجل ٦ أيام أسبوعياً (عادي + عكسي)',period:'مستمر'},
-    {id:'b3',text:'خسارة ١٠ كيلو',period:'٦ أشهر'},
-    {id:'b4',text:'بدء Boxing',period:'٣ أشهر'},
-    {id:'b5',text:'خسارة ٢٠ كيلو',period:'٩ أشهر'},
-    {id:'b6',text:'خسارة ٣٠ كيلو',period:'هدف'},
+    {id:'b3',text:'لعب رياضة قتالية',period:'هدف'},
+    {id:'b4',text:'خسارة ٣٠ كيلو',period:'هدف'},
   ],
   asri:[
     {id:'a1',text:'الاستعداد للزواج مادياً ونفسياً',period:'هدف'},
@@ -887,7 +1054,9 @@ const STATIC_GOALS = {
 // DYNAMIC DATA
 // ═══════════════════════════════════════════
 const LS_DEFS = {
-  bw_deen_goals: [{id:'dn1',text:'حفظ ١٥ جزءاً من القرآن الكريم',period:'هدف رئيسي',done:false},{id:'dn2',text:'الورد اليومي من الاهتداء بالقرآن وتدبره',period:'يومي',done:false},{id:'dn3',text:'محاسبة النفس يومياً — الجلسة النفسية',period:'يومي',done:false},{id:'dn4',text:'الانقطاع للعبادة',period:'دوري',done:false},{id:'dn5',text:'التوبة النصوح والاستمرار فيها',period:'مستمر',done:false}],
+  bw_deen_goals: [{id:'dn1',text:'حفظ ١٥ جزءاً من القرآن الكريم',period:'هدف رئيسي',done:false},{id:'dn2',text:'الورد اليومي من الاهتداء بالقرآن وتدبره',period:'يومي',done:false},{id:'dn3',text:'محاسبة النفس يومياً — الجلسة النفسية',period:'يومي',done:false},{id:'dn4',text:'الانقطاع للعبادة',period:'دوري',done:false},{id:'dn5',text:'التوبة النصوح والاستمرار فيها',period:'مستمر',done:false},
+  {id:'dn6',text:'كفارة الأيمان',period:'واجب',done:false},
+  {id:'dn7',text:'الانتهاء من العادة السرية نهائياً والتوبة منها',period:'أولوية قصوى',done:false}],
   bw_done_mihani:{}, bw_done_badani:{}, bw_done_asri:{},
   bw_ilmi:{domains:[]},
   bw_quotes:[],
@@ -1073,156 +1242,27 @@ function toggleStatic(areaId, gid, doneKey){
 }
 
 // ═══════════════════════════════════════════
-// ILMI DOMAINS
-// ═══════════════════════════════════════════
-function addDomain(){
-  const name=document.getElementById('new-domain-name').value.trim();
-  if(!name) return;
-  ilmiData.domains.push({id:Date.now()+'',title:name,color:selColor,items:[]});
-  sv('bw_ilmi',ilmiData);
-  document.getElementById('new-domain-name').value='';
-  closeForm('ilmi-domain-form');
-  renderIlmi();
-}
-function openAddSkill(did){
-  document.getElementById('ilmi-skill-form').dataset.domain=did;
-  openForm('ilmi-skill-form');
-}
-function addSkill(){
-  const form=document.getElementById('ilmi-skill-form');
-  const did=form.dataset.domain;
-  const name=document.getElementById('new-skill-name').value.trim();
-  if(!name) return;
-  const det=document.getElementById('new-skill-det').value.trim();
-  const dom=ilmiData.domains.find(d=>d.id===did);
-  if(dom){ dom.items.push({id:Date.now()+'',title:name,details:det}); sv('bw_ilmi',ilmiData); document.getElementById('new-skill-name').value=''; document.getElementById('new-skill-det').value=''; closeForm('ilmi-skill-form'); renderIlmi(); }
-}
-function delDomain(id){ ilmiData.domains=ilmiData.domains.filter(d=>d.id!==id); sv('bw_ilmi',ilmiData); renderIlmi(); }
-function delSkill(did,iid){ const d=ilmiData.domains.find(d=>d.id===did); if(d){d.items=d.items.filter(i=>i.id!==iid); sv('bw_ilmi',ilmiData); renderIlmi();} }
-function renderIlmi(){
-  const el=document.getElementById('ilmi-domains'); if(!el) return;
-  if(!ilmiData.domains.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:8px 0">اضغط إضافة لإنشاء مجالاتك العلمية</div>'; return; }
-  el.innerHTML=ilmiData.domains.map(d=>`<div class="domain-card"><div class="domain-hdr"><div class="domain-bar" style="background:${d.color}"></div><div class="domain-title" style="color:${d.color}">${d.title}</div><button class="domain-del" onclick="delDomain('${d.id}')">✕</button></div>${d.items.length===0?'<div style="font-size:12px;color:var(--text3);padding:2px 0 8px">لا توجد مهارات بعد</div>':''} ${d.items.map(i=>`<div class="skill-item"><div style="flex:1"><div class="skill-title">${i.title}</div>${i.details?`<div class="skill-details">${i.details}</div>`:''}</div><button class="skill-del" onclick="delSkill('${d.id}','${i.id}')">✕</button></div>`).join('')}<button class="add-btn" style="font-size:11px;padding:5px 10px;margin-top:8px" onclick="openAddSkill('${d.id}')">+ مهارة أو مادة</button></div>`).join('');
-}
-
-// ═══════════════════════════════════════════
-// QUOTES
-// ═══════════════════════════════════════════
-function addQuote(){ const text=document.getElementById('new-q-text').value.trim(); if(!text) return; const src=document.getElementById('new-q-src').value.trim(); quotesData.push({id:Date.now()+'',text,src}); sv('bw_quotes',quotesData); document.getElementById('new-q-text').value=''; document.getElementById('new-q-src').value=''; closeForm('quote-form'); renderQuotes(); }
-function delQuote(id){ quotesData=quotesData.filter(q=>q.id!==id); sv('bw_quotes',quotesData); renderQuotes(); }
-function renderQuotes(){
-  const el=document.getElementById('quotes-list'); if(!el) return;
-  if(!quotesData.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:6px 0">أضف مبصراتك وأبياتك المحفزة...</div>'; return; }
-  el.innerHTML=quotesData.map(q=>`<div class="quote-item"><div class="quote-bar"></div><div class="quote-body"><div class="quote-text">${q.text.replace(/\n/g,'<br>')}</div>${q.src?`<div class="quote-src">— ${q.src}</div>`:''}</div><button class="skill-del" onclick="delQuote('${q.id}')">✕</button></div>`).join('');
-}
-
-// ═══════════════════════════════════════════
-// MEDIA
-// ═══════════════════════════════════════════
-function addMedia(){ const title=document.getElementById('new-m-title').value.trim(); if(!title) return; const url=document.getElementById('new-m-url').value.trim(); mediaData.push({id:Date.now()+'',title,url}); sv('bw_media',mediaData); document.getElementById('new-m-title').value=''; document.getElementById('new-m-url').value=''; closeForm('media-form'); renderMedia(); }
-function delMedia(id){ mediaData=mediaData.filter(m=>m.id!==id); sv('bw_media',mediaData); renderMedia(); }
-function renderMedia(){
-  const el=document.getElementById('media-list'); if(!el) return;
-  el.innerHTML=mediaData.map(m=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><a class="media-item" style="flex:1" href="${m.url||'#'}" target="_blank"><div class="media-icon">▶</div><div class="media-title">${m.title}</div></a><button class="skill-del" onclick="delMedia('${m.id}')">✕</button></div>`).join('');
-}
-
-// ═══════════════════════════════════════════
-// SIRAH
-// ═══════════════════════════════════════════
-function addSirah(){ const title=document.getElementById('new-s-title').value.trim(); if(!title) return; const details=document.getElementById('new-s-details').value.trim(); const url=document.getElementById('new-s-url').value.trim(); sirahData.push({id:Date.now()+'',title,details,url}); sv('bw_sirah',sirahData); document.getElementById('new-s-title').value=''; document.getElementById('new-s-details').value=''; document.getElementById('new-s-url').value=''; closeForm('sirah-form'); renderSirah(); }
-function delSirah(id){ sirahData=sirahData.filter(s=>s.id!==id); sv('bw_sirah',sirahData); renderSirah(); }
-function renderSirah(){
-  const el=document.getElementById('sirah-list'); if(!el) return;
-  if(!sirahData.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:6px 0">أضف سير العلماء والأئمة والهداة...</div>'; return; }
-  el.innerHTML=sirahData.map(s=>`<div class="sirah-item"><div class="sirah-name">⬡ ${s.title}<button class="skill-del" style="margin-right:auto" onclick="delSirah('${s.id}')">✕</button></div>${s.details?`<div class="sirah-details">${s.details}</div>`:''} ${s.url?`<a class="sirah-link" href="${s.url}" target="_blank">↗ رابط</a>`:''}</div>`).join('');
-}
-
-// ═══════════════════════════════════════════
-// ASPIR
-// ═══════════════════════════════════════════
-function addAspir(){ const text=document.getElementById('new-aspir').value.trim(); if(!text) return; aspirData.push({id:Date.now()+'',text}); sv('bw_aspir',aspirData); document.getElementById('new-aspir').value=''; closeForm('aspir-form'); renderAspir(); }
-function delAspir(id){ aspirData=aspirData.filter(a=>a.id!==id); sv('bw_aspir',aspirData); renderAspir(); }
-function renderAspir(){
-  const el=document.getElementById('aspir-list'); if(!el) return;
-  el.innerHTML=aspirData.map(a=>`<div class="aspir-item"><span class="aspir-dot">◆</span><span class="aspir-text">${a.text}</span><button class="skill-del" onclick="delAspir('${a.id}')">✕</button></div>`).join('');
-}
-
-// ═══════════════════════════════════════════
-// BOOKS
-// ═══════════════════════════════════════════
-const catColors={'إسلامي':'#c9a227','تزكية':'#c45028','علم نفس':'#7c5cbf','تطوير ذات':'#2d7dd2','مالي':'#1a8f68','مهني':'#1a6e8f','أدب':'#888'};
-function addBook(){ const title=document.getElementById('new-b-title').value.trim(); if(!title) return; const author=document.getElementById('new-b-author').value.trim(); const url=document.getElementById('new-b-url').value.trim(); const cat=document.getElementById('new-b-cat').value; const status=document.getElementById('new-b-status').value; booksData.push({id:Date.now()+'',title,author,cat,status,url}); sv('bw_books',booksData); document.getElementById('new-b-title').value=''; document.getElementById('new-b-author').value=''; document.getElementById('new-b-url').value=''; closeForm('book-form'); renderBooks(); }
-function delBook(id){ booksData=booksData.filter(b=>b.id!==id); sv('bw_books',booksData); renderBooks(); }
-function renderBooks(){
-  const el=document.getElementById('books-list'); if(!el) return;
-  const col=id=>'rgba('+parseInt((catColors[id]||'#888').slice(1,3),16)+','+parseInt((catColors[id]||'#888').slice(3,5),16)+','+parseInt((catColors[id]||'#888').slice(5,7),16)+',0.12)';
-  el.innerHTML=`<div class="books-grid">`+booksData.map(b=>{const c=catColors[b.cat]||'#888'; const tc=b.title; return `<div class="book-item"><div class="book-cat" style="color:${c}">${b.cat}</div>${b.url?`<a href="${b.url}" target="_blank" style="text-decoration:none"><div class="book-title" style="color:var(--gold)">${tc} ↗</div></a>`:`<div class="book-title">${tc}</div>`}<div class="book-author">${b.author}</div><div class="${b.status==='جارٍ'?'book-status-ok':b.status==='أكملته'?'book-status-ok':'book-status-pend'}">${b.status}</div><button class="skill-del" onclick="delBook('${b.id}')">✕</button></div>`;}).join('')+`</div>`;
-}
-
-// ═══════════════════════════════════════════
-// NAV + PROGRESS
-// ═══════════════════════════════════════════
-function areaPct(id){
-  if(id==='deen'){ const done=deenGoals.filter(g=>g.done).length; return {done,total:deenGoals.length,pct:Math.round(done/Math.max(deenGoals.length,1)*100)}; }
-  if(id==='ilmi') return {done:0,total:0,pct:0};
-  if(id==='mubsarat') return {done:0,total:0,pct:0};
-  const stores={mihani:doneM,badani:doneBd,asri:doneAs};
-  const goals=STATIC_GOALS[id]||[];
-  const store=stores[id]||{};
-  const done=goals.filter(g=>store[g.id]).length;
-  return {done,total:goals.length,pct:Math.round(done/Math.max(goals.length,1)*100)};
-}
-
-function renderNav(){
-  const allG=[...deenGoals,...(STATIC_GOALS.mihani||[]),...(STATIC_GOALS.badani||[]),...(STATIC_GOALS.asri||[])];
-  const allD=deenGoals.filter(g=>g.done).length + (STATIC_GOALS.mihani||[]).filter(g=>doneM[g.id]).length + (STATIC_GOALS.badani||[]).filter(g=>doneBd[g.id]).length + (STATIC_GOALS.asri||[]).filter(g=>doneAs[g.id]).length;
-  const pct=Math.round(allD/Math.max(allG.length,1)*100);
-  document.getElementById('navBar').innerHTML=TABS.map(t=>{
-    const s=areaPct(t.id);
-    const cnt=s.total?` <span style="opacity:.45;font-size:10px">${s.done}/${s.total}</span>`:'';
-    const star=t.primary?`<span class="star">★</span>`:'';
-    return `<button class="nav-tab ${t.primary?'primary-tab':''} ${t.id===activeTab?'active':''}" onclick="switchTab('${t.id}')">${star}${t.label}${cnt}</button>`;
-  }).join('')+
-  `<div style="margin-right:auto;display:flex;align-items:center;gap:8px;padding:7px 0"><span style="font-size:11px;color:var(--text2)">${allD}/${allG.length}</span><div style="width:70px;height:3px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden"><div style="height:100%;width:${pct}%;background:var(--gold);border-radius:2px"></div></div><span style="font-size:11px;color:var(--gold)">${pct}%</span></div>`;
-}
-function switchTab(id){
-  activeTab=id; sv('bw_tab',id);
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.getElementById('panel-'+id)?.classList.add('active');
-  renderNav();
-}
-
-// ═══════════════════════════════════════════
-// MODE TOGGLE
-// ═══════════════════════════════════════════
-function toggleMode(){
-  const isEdit=document.body.classList.toggle('edit-mode');
-  sv('bw_mode',isEdit?'edit':'view');
-  const btn=document.getElementById('mode-btn');
-  btn.querySelector('#mode-icon').textContent=isEdit?'👁':'✏';
-  btn.querySelector('#mode-label').textContent=isEdit?'عرض':'تعديل';
-  btn.classList.toggle('editing',isEdit);
-  // On exit edit mode: close all forms
-  if(!isEdit) document.querySelectorAll('.inline-form.open').forEach(f=>f.classList.remove('open'));
-}
-
-// ═══════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════
 window.addEventListener('DOMContentLoaded',()=>{
+
   // Restore mode
   if(ld('bw_mode')==='edit'){
     document.body.classList.add('edit-mode');
-    document.getElementById('mode-btn').classList.add('editing');
-    document.getElementById('mode-icon').textContent='👁';
-    document.getElementById('mode-label').textContent='عرض';
+    const btn=document.getElementById('mode-btn');
+    const ic=document.getElementById('mode-icon');
+    const lb=document.getElementById('mode-label');
+    if(btn) btn.classList.add('editing');
+    if(ic) ic.textContent='👁';
+    if(lb) lb.textContent='عرض';
   }
 
   // Load identity
-  const idV=ld('bw_identity')||'';
-  if(document.getElementById('identity')) document.getElementById('identity').value=idV;
-  const idD=document.getElementById('id-disp');
-  if(idD){ idD.textContent=idV||'اضغط للكتابة...'; idD.style.color=idV?'var(--text)':'var(--text3)'; }
+  const idV=ld('bw_identity')||'عبد لله، محاسب لنفسه، يسعى أن يكون على مراد الله وأن يكون عارفاً سائراً إليه. حنبلي المذهب. محب للعلوم والكتب. محب للتمام الإنساني وعلو الهمة.';
+  const idInp=document.getElementById('identity');
+  const idDisp=document.getElementById('id-disp');
+  if(idInp) idInp.value=idV;
+  if(idDisp){ idDisp.textContent=idV||'اضغط للكتابة...'; idDisp.style.color=idV?'var(--text)':'var(--text3)'; }
 
   // Load ef-wrap fields
   ['fault1','fault2','fault3','letter'].forEach(id=>loadText(id));
@@ -1230,20 +1270,72 @@ window.addEventListener('DOMContentLoaded',()=>{
   // Load ef-inline fields
   ['now-ilmi','tgt-ilmi','job-co','job-fl','now-mih','tgt-mih','now-bd','tgt-bd','now-as','tgt-as','why'].forEach(id=>loadText(id));
 
-  // Render all dynamic
+
+
+
+  // Migration: mtasks
+  try {
+    const rawMT = localStorage.getItem('bw_mtasks');
+    if(!rawMT || rawMT === '[object Object]') {
+      localStorage.setItem('bw_mtasks', JSON.stringify(DEFAULT_MTASKS));
+      mTasksData = JSON.parse(JSON.stringify(DEFAULT_MTASKS));
+    }
+  } catch(e) {
+    localStorage.setItem('bw_mtasks', JSON.stringify(DEFAULT_MTASKS));
+  }
+
+  // Migration: articles (safe)
+  try {
+    const rawArt = localStorage.getItem('bw_articles');
+    if(!rawArt || rawArt === '[object Object]') {
+      sv('bw_articles', DEFAULT_ARTICLES);
+      articlesData = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
+    } else {
+      const existing = JSON.parse(rawArt);
+      if(Array.isArray(existing)) {
+        let changed = false;
+        if(!existing.find(a=>a.id==='art1')){ existing.unshift(DEFAULT_ARTICLES[0]); changed=true; }
+        if(!existing.find(a=>a.id==='art2')){ existing.push(DEFAULT_ARTICLES[1]); changed=true; }
+        if(changed) sv('bw_articles', existing);
+        articlesData = existing;
+      }
+    }
+  } catch(e) {
+    sv('bw_articles', DEFAULT_ARTICLES);
+    articlesData = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
+  }
+
+  // Migration: ensure new deen goals exist
+  const mustHave = [
+    {id:'dn6', text:'كفارة الأيمان', period:'واجب', done:false}
+    ,{id:'dn7', text:'الانتهاء من العادة السرية نهائياً والتوبة منها', period:'أولوية قصوى', done:false}
+  ];
+  mustHave.forEach(item => {
+    if(!deenGoals.find(g=>g.id===item.id)){
+      deenGoals.push(item);
+      sv('bw_deen_goals', deenGoals);
+    }
+  });
+
+  // Render all dynamic sections
   renderMQ();
   renderDeenGoals();
   renderStaticGoals('mihani','goals-mihani',doneM,'bw_done_mihani','green-fill');
   renderStaticGoals('badani','goals-badani',doneBd,'bw_done_badani','coral-fill');
   renderStaticGoals('asri','goals-asri',doneAs,'bw_done_asri','blue-fill');
-  renderIlmi();
+  renderIlmiContent();
+  renderFawait();
+  renderArticles();
   renderQuotes();
   renderMedia();
   renderSirah();
   renderAspir();
   renderBooks();
   renderNav();
+  renderMTasks();
   initProfPanel();
+  switchIlmiTab(activeIlmiTab||'deen');
+  updateGhBtn();
 });
 
 
@@ -1390,12 +1482,8 @@ function renderGenSkills(){
 
 // ═══════════ PROF GOALS ═══════════
 let profGoals = (() => { try { return JSON.parse(localStorage.getItem('bw_pgoals') || 'null') || [
-  {id:'pg1',name:'دخل ١٥٠٠ دولار+ شهرياً منتظم من الفريلانس',details:'الهدف النهائي للاستقلالية المالية والاستعداد للزواج',duration:'١٣ شهراً'},
-  {id:'pg2',name:'دخل ٨٠٠ إلى ١٢٠٠ دولار شهرياً',details:'مرحلة بناء الزخم',duration:'٩ أشهر'},
-  {id:'pg3',name:'دخل ٥٠٠ إلى ٨٠٠ دولار شهرياً',details:'الاستقلالية الأولى',duration:'٦ أشهر'},
-  {id:'pg4',name:'أول عميل فريلانس راضٍ',details:'بداية بناء السمعة والتقييمات',duration:'٣ أشهر'},
-  {id:'pg5',name:'Flutter Portfolio احترافي',details:'٥ مشاريع موثقة تعكس Clean Architecture و Cubit',duration:'٣ أشهر'},
-  {id:'pg6',name:'أول Proposal مُرسَل',details:'كسر جمود البداية',duration:'الأسبوع القادم'},
+  {id:'pg1',name:'الوصول لدخل ١٥٠٠ دولار شهرياً من الفريلانس',details:'مراحل: أول عميل → ٥٠٠$ → ٨٠٠$ → ١٢٠٠$ → ١٥٠٠$+',duration:'هدف رئيسي'},
+  {id:'pg2',name:'العمل في شركة أخرى جيدة',details:'شركة جدية تناسب المستوى وتفتح آفاق أوسع',duration:'هدف'},
 ]; } catch { return []; } })();
 
 function addProfGoal(){
@@ -1435,7 +1523,7 @@ const ALL_KEYS = ['bw_identity','bw_mq','bw_deen_goals','bw_ilmi','bw_quotes','b
   'bw_done_mihani','bw_done_badani','bw_done_asri','bw_tab','bw_mode',
   'bw_fault1','bw_fault2','bw_fault3','bw_letter',
   'bw_now-ilmi','bw_tgt-ilmi','bw_job-co','bw_job-fl',
-  'bw_now-mih','bw_tgt-mih','bw_now-bd','bw_tgt-bd','bw_now-as','bw_tgt-as','bw_why','bw_bm_topics','bw_tk_topics','bw_bm_notes','bw_tk_notes'];
+  'bw_now-mih','bw_tgt-mih','bw_now-bd','bw_tgt-bd','bw_now-as','bw_tgt-as','bw_why','bw_ilmi_v2','bw_fawait','bw_ilmi_tab','bw_articles','bw_mtasks'];
 
 
 // ═══════════ GITHUB GIST SYNC ═══════════
@@ -1593,43 +1681,7 @@ document.getElementById('gh-overlay').addEventListener('click', function(e){
 });
 
 // Init GitHub UI
-window.addEventListener("DOMContentLoaded",()=>{ updateGhBtn(); });
 
-// ═══════════ البناء المنهجي ═══════════
-function makeBookTracker(key, listId, progId, formId, inputId, addFn){
-  let data = JSON.parse(localStorage.getItem(key)||'[]');
-  function save(){ localStorage.setItem(key,JSON.stringify(data)); }
-  function render(){
-    const el=document.getElementById(listId); if(!el) return;
-    const done=data.filter(t=>t.done).length;
-    const pct=data.length?Math.round(done/data.length*100):0;
-    const prog=document.getElementById(progId);
-    if(prog) prog.innerHTML=`<span style="font-size:11px;color:var(--text2)">${done}/${data.length}</span><div class="prog-outer"><div class="prog-fill gold-fill" style="width:${pct}%"></div></div><span style="font-size:11px;color:var(--text2)">${pct}%</span>`;
-    el.innerHTML=data.map(t=>`<div class="bm-topic ${t.done?'done-t':''}" onclick="window['${key}_toggle']('${t.id}')"><div class="chk ${t.done?'on':''}">${t.done?'✓':''}</div><div class="bm-topic-text ${t.done?'done-txt':''}">${t.title}</div><button class="bm-topic-del skill-del" onclick="event.stopPropagation();window['${key}_del']('${t.id}')">✕</button></div>`).join('');
-  }
-  window[addFn]=function(){
-    const text=document.getElementById(inputId).value.trim(); if(!text) return;
-    data.push({id:Date.now()+'',title:text,done:false}); save();
-    document.getElementById(inputId).value=''; closeForm(formId); render();
-  };
-  window[key+'_toggle']=function(id){ const t=data.find(t=>t.id===id); if(t){t.done=!t.done; save(); render();} };
-  window[key+'_del']=function(id){ data=data.filter(t=>t.id!==id); save(); render(); };
-  render();
-  return {render};
-}
-
-makeBookTracker('bw_bm_topics','bm-topics','bm-prog-row','bm-topic-form','new-bm-topic','addBMTopic');
-makeBookTracker('bw_tk_topics','tk-topics','tk-prog-row','tk-topic-form','new-tk-topic','addTKTopic');
-
-function saveBMNotes(){ localStorage.setItem('bw_bm_notes',document.getElementById('bm-notes')?.value||''); }
-function saveTKNotes(){ localStorage.setItem('bw_tk_notes',document.getElementById('tk-notes')?.value||''); }
-
-window.addEventListener('DOMContentLoaded',()=>{
-  const bmn=localStorage.getItem('bw_bm_notes')||'';
-  const tkn=localStorage.getItem('bw_tk_notes')||'';
-  if(document.getElementById('bm-notes')) document.getElementById('bm-notes').value=bmn;
-  if(document.getElementById('tk-notes')) document.getElementById('tk-notes').value=tkn;
-});
 
 
 // ═══════════ COPY-PASTE TRANSFER ═══════════
@@ -1673,6 +1725,525 @@ function pasteImport(){
   }
 }
 document.getElementById('cp-overlay').addEventListener('click',function(e){ if(e.target===this) closeCPOverlay(); });
+
+
+// ═══════════ ILMI DATA ═══════════
+let sciColor = '#c9a227';
+let masaraColor = '#c9a227';
+let activeIlmiTab = localStorage.getItem('bw_ilmi_tab') || 'shari';
+
+const ILMI_DEFAULTS = {
+  shari: {
+    programs: [],
+    sciences: [
+      {id:'sci-s1', name:'الفقه الحنبلي', color:'#c9a227', skills:[{id:'sk-s1',name:'الطهارة والصلاة',level:2},{id:'sk-s2',name:'زاد المستقنع',level:1}]},
+      {id:'sci-s2', name:'أصول الفقه', color:'#c45028', skills:[]},
+      {id:'sci-s3', name:'الحديث والمصطلح', color:'#2d7dd2', skills:[]},
+    ],
+    masarat: [
+      {id:'ms-s1', name:'علوم اللغة العربية', color:'#c9a227', open:false, topics:[
+        {id:'t-s1',title:'البناء المنهجي',done:false},
+        {id:'t-s2',title:'علم النحو الأساسي',done:false},
+        {id:'t-s3',title:'الصرف',done:false},
+        {id:'t-s4',title:'البلاغة المبسطة',done:false},
+      ]},
+      {id:'ms-s2', name:'علوم القرآن الكريم', color:'#1a8f68', open:false, topics:[
+        {id:'t-s5',title:'حفظ ١٥ جزءاً من القرآن',done:false},
+        {id:'t-s6',title:'ضبط التجويد',done:false},
+        {id:'t-s7',title:'التدبر والاهتداء',done:false},
+        {id:'t-s8',title:'علوم القرآن التفسيرية',done:false},
+      ]},
+    ],
+  },
+  donyawi: {
+    programs: [],
+    sciences: [],
+    masarat: [],
+  }
+};
+
+let ilmiState = (() => {
+  try { return JSON.parse(localStorage.getItem('bw_ilmi_v2')||'null') || JSON.parse(JSON.stringify(ILMI_DEFAULTS)); }
+  catch { return JSON.parse(JSON.stringify(ILMI_DEFAULTS)); }
+})();
+
+function saveIlmi(){ localStorage.setItem('bw_ilmi_v2', JSON.stringify(ilmiState)); }
+function getIlmiSide(){ return ilmiState[activeIlmiTab]; }
+
+function switchIlmiTab(tab){
+  activeIlmiTab = tab;
+  localStorage.setItem('bw_ilmi_tab', tab);
+  document.querySelectorAll('.ilmi-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.ilmi-tab').forEach(t=>{ if(t.classList.contains(tab)) t.classList.add('active'); });
+  renderIlmiContent();
+}
+
+function pickSciColor(el){ document.querySelectorAll('#sci-cpick .cdot').forEach(d=>d.classList.remove('sel')); el.classList.add('sel'); sciColor=el.dataset.c; }
+function pickMasaraColor(el){ document.querySelectorAll('#masara-cpick .cdot').forEach(d=>d.classList.remove('sel')); el.classList.add('sel'); masaraColor=el.dataset.c; }
+
+const LV2={1:'أساسي',2:'متوسط',3:'متقدم',4:'خبير'};
+const LC2={1:'l1',2:'l2',3:'l3',4:'l4'};
+
+function renderIlmiContent(){
+  const el = document.getElementById('ilmi-tab-content'); if(!el) return;
+  const side = getIlmiSide();
+  const color = activeIlmiTab==='shari' ? '#c9a227' : '#2d7dd2';
+
+  // ── 1. MASARAT ──
+  let masaratHTML = side.masarat.map(m=>{
+    const done=m.topics.filter(t=>t.done).length;
+    const pct=m.topics.length?Math.round(done/m.topics.length*100):0;
+    const isOpen = m.open;
+    return `<div class="masara-card" style="border-right-color:${m.color}">
+      <div class="masara-hdr" onclick="toggleMasara('${activeIlmiTab}','${m.id}')">
+        <span class="masara-arrow ${isOpen?'open':''}">▶</span>
+        <span class="masara-name" style="color:${m.color}">${m.name}</span>
+        <span class="masara-pct">${done}/${m.topics.length} · ${pct}%</span>
+        <button class="skill-del" onclick="event.stopPropagation();delMasara('${activeIlmiTab}','${m.id}')">✕</button>
+      </div>
+      <div class="masara-body ${isOpen?'open':''}">
+        <div class="prog-outer" style="margin-bottom:10px"><div class="prog-fill" style="width:${pct}%;background:${m.color}"></div></div>
+        ${m.topics.map(t=>`<div class="goal-row ${t.done?'done':''}" onclick="toggleMasaraTopic('${activeIlmiTab}','${m.id}','${t.id}')">
+          <div class="chk ${t.done?'on':''}">${t.done?'✓':''}</div>
+          <div style="flex:1"><div class="goal-txt">${t.title}</div></div>
+          <button class="g-del" onclick="event.stopPropagation();delMasaraTopic('${activeIlmiTab}','${m.id}','${t.id}')">✕</button>
+        </div>`).join('')}
+        <button class="add-btn" style="font-size:11px;padding:5px 10px;margin-top:6px" onclick="openMasaraTopic('${activeIlmiTab}','${m.id}')">+ إضافة موضوع</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // ── 2. PROGRAMS ──
+  let progsHTML = side.programs.map(p=>`<div class="prog-card">
+    <div class="prog-name">${p.name}<button class="skill-del" onclick="delProgram('${activeIlmiTab}','${p.id}')">✕</button></div>
+    ${p.subjects.map(s=>`<div class="prog-subject ${s.done?'done-s':''}" onclick="toggleSubject('${activeIlmiTab}','${p.id}','${s.id}')">
+      <div class="chk ${s.done?'on':''}" style="width:14px;height:14px;font-size:9px">${s.done?'✓':''}</div>${s.title}
+      <button class="skill-del" onclick="event.stopPropagation();delSubject('${activeIlmiTab}','${p.id}','${s.id}')">✕</button>
+    </div>`).join('')}
+    <button class="add-btn" style="font-size:11px;padding:5px 10px;margin-top:6px" onclick="openSubjectForm('${activeIlmiTab}','${p.id}')">+ إضافة مادة</button>
+  </div>`).join('');
+
+  // ── 3. SCIENCES ──
+  let sciHTML = side.sciences.map(s=>`<div class="domain-card">
+    <div class="domain-hdr"><div class="domain-bar" style="background:${s.color}"></div><div class="domain-title" style="color:${s.color}">${s.name}</div><button class="domain-del" onclick="delScience('${activeIlmiTab}','${s.id}')">✕</button></div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px">${s.skills.map(sk=>`<div class="skill-card"><span class="sk-name">${sk.name}</span><span class="sk-level ${LC2[sk.level]}">${LV2[sk.level]}</span><button class="sk-del skill-del" onclick="delSciSkill('${activeIlmiTab}','${s.id}','${sk.id}')">✕</button></div>`).join('')}</div>
+    <button class="add-btn" style="font-size:11px;padding:5px 10px" onclick="openSciSkillForm('${activeIlmiTab}','${s.id}')">+ إضافة مهارة</button>
+  </div>`).join('');
+
+  el.innerHTML = `
+    <div class="ilmi-sec-wrap">
+      <div class="ilmi-sec-hdr"><span class="ilmi-sec-icon">🗺</span><span class="ilmi-sec-title">المسار العلمي</span></div>
+      <div class="ilmi-sec-body">
+        ${masaratHTML||'<div style="font-size:12px;color:var(--text3)">لا توجد مسارات بعد</div>'}
+        <div id="ilmi-new-masara-form-trigger"></div>
+        <button class="add-btn" onclick="openNewMasaraForm('${activeIlmiTab}')">+ إضافة مسار علمي</button>
+      </div>
+    </div>
+    <div class="ilmi-sec-wrap">
+      <div class="ilmi-sec-hdr"><span class="ilmi-sec-icon">📋</span><span class="ilmi-sec-title">البرامج والمسارات الأكاديمية</span></div>
+      <div class="ilmi-sec-body">
+        ${progsHTML||'<div style="font-size:12px;color:var(--text3);margin-bottom:8px">لا توجد برامج بعد</div>'}
+        <button class="add-btn" onclick="openProgramForm('${activeIlmiTab}')">+ إضافة برنامج</button>
+      </div>
+    </div>
+    <div class="ilmi-sec-wrap">
+      <div class="ilmi-sec-hdr"><span class="ilmi-sec-icon">⚗</span><span class="ilmi-sec-title">العلوم والمعارف</span></div>
+      <div class="ilmi-sec-body">
+        ${sciHTML||'<div style="font-size:12px;color:var(--text3);margin-bottom:8px">لا توجد علوم بعد</div>'}
+        <button class="add-btn" onclick="openScienceForm('${activeIlmiTab}')">+ إضافة علم</button>
+      </div>
+    </div>`;
+}
+
+// ── MASARAT ──
+function toggleMasara(side, mid){ const m=ilmiState[side].masarat.find(m=>m.id===mid); if(m){m.open=!m.open; saveIlmi(); renderIlmiContent();} }
+function toggleMasaraTopic(side,mid,tid){ const m=ilmiState[side].masarat.find(m=>m.id===mid); if(m){const t=m.topics.find(t=>t.id===tid); if(t){t.done=!t.done; saveIlmi(); renderIlmiContent();}} }
+function delMasara(side,mid){ ilmiState[side].masarat=ilmiState[side].masarat.filter(m=>m.id!==mid); saveIlmi(); renderIlmiContent(); }
+function delMasaraTopic(side,mid,tid){ const m=ilmiState[side].masarat.find(m=>m.id===mid); if(m){m.topics=m.topics.filter(t=>t.id!==tid); saveIlmi(); renderIlmiContent();} }
+function openMasaraTopic(side,mid){ const f=document.getElementById('ilmi-masara-form'); f.dataset.side=side; f.dataset.masara=mid; openForm('ilmi-masara-form'); }
+function addMasaraTopic(){ const f=document.getElementById('ilmi-masara-form'); const side=f.dataset.side; const mid=f.dataset.masara; const title=document.getElementById('new-masara-topic').value.trim(); if(!title) return; const m=ilmiState[side].masarat.find(m=>m.id===mid); if(m){m.topics.push({id:Date.now()+'',title,done:false}); saveIlmi(); document.getElementById('new-masara-topic').value=''; closeForm('ilmi-masara-form'); renderIlmiContent();} }
+function openNewMasaraForm(side){ const f=document.getElementById('ilmi-new-masara-form'); f.dataset.side=side; openForm('ilmi-new-masara-form'); }
+function addNewMasara(){ const f=document.getElementById('ilmi-new-masara-form'); const side=f.dataset.side; const name=document.getElementById('new-masara-name').value.trim(); if(!name) return; ilmiState[side].masarat.push({id:Date.now()+'',name,color:masaraColor,open:false,topics:[]}); saveIlmi(); document.getElementById('new-masara-name').value=''; closeForm('ilmi-new-masara-form'); renderIlmiContent(); }
+
+// ── PROGRAMS ──
+function openProgramForm(side){ const f=document.getElementById('ilmi-prog-form'); f.dataset.side=side; openForm('ilmi-prog-form'); }
+function addProgram(){ const f=document.getElementById('ilmi-prog-form'); const side=f.dataset.side; const name=document.getElementById('new-prog-name').value.trim(); if(!name) return; ilmiState[side].programs.push({id:Date.now()+'',name,subjects:[]}); saveIlmi(); document.getElementById('new-prog-name').value=''; closeForm('ilmi-prog-form'); renderIlmiContent(); }
+function delProgram(side,pid){ ilmiState[side].programs=ilmiState[side].programs.filter(p=>p.id!==pid); saveIlmi(); renderIlmiContent(); }
+function openSubjectForm(side,pid){ const f=document.getElementById('ilmi-subj-form'); f.dataset.side=side; f.dataset.prog=pid; openForm('ilmi-subj-form'); }
+function addSubject(){ const f=document.getElementById('ilmi-subj-form'); const side=f.dataset.side; const pid=f.dataset.prog; const title=document.getElementById('new-subj-name').value.trim(); if(!title) return; const p=ilmiState[side].programs.find(p=>p.id===pid); if(p){p.subjects.push({id:Date.now()+'',title,done:false}); saveIlmi(); document.getElementById('new-subj-name').value=''; closeForm('ilmi-subj-form'); renderIlmiContent();} }
+function toggleSubject(side,pid,sid){ const p=ilmiState[side].programs.find(p=>p.id===pid); if(p){const s=p.subjects.find(s=>s.id===sid); if(s){s.done=!s.done; saveIlmi(); renderIlmiContent();}} }
+function delSubject(side,pid,sid){ const p=ilmiState[side].programs.find(p=>p.id===pid); if(p){p.subjects=p.subjects.filter(s=>s.id!==sid); saveIlmi(); renderIlmiContent();} }
+
+// ── SCIENCES ──
+function openScienceForm(side){ const f=document.getElementById('ilmi-sci-form'); f.dataset.side=side; openForm('ilmi-sci-form'); }
+function addScience(){ const f=document.getElementById('ilmi-sci-form'); const side=f.dataset.side; const name=document.getElementById('new-sci-name').value.trim(); if(!name) return; ilmiState[side].sciences.push({id:Date.now()+'',name,color:sciColor,skills:[]}); saveIlmi(); document.getElementById('new-sci-name').value=''; closeForm('ilmi-sci-form'); renderIlmiContent(); }
+function delScience(side,sid){ ilmiState[side].sciences=ilmiState[side].sciences.filter(s=>s.id!==sid); saveIlmi(); renderIlmiContent(); }
+function openSciSkillForm(side,sid){ const f=document.getElementById('ilmi-skill-form2'); f.dataset.side=side; f.dataset.sci=sid; openForm('ilmi-skill-form2'); }
+function addSciSkill(){ const f=document.getElementById('ilmi-skill-form2'); const side=f.dataset.side; const sid=f.dataset.sci; const name=document.getElementById('new-skill2-name').value.trim(); if(!name) return; const lv=parseInt(document.getElementById('new-skill2-lv').value); const s=ilmiState[side].sciences.find(s=>s.id===sid); if(s){s.skills.push({id:Date.now()+'',name,level:lv}); saveIlmi(); document.getElementById('new-skill2-name').value=''; closeForm('ilmi-skill-form2'); renderIlmiContent();} }
+function delSciSkill(side,sciId,skillId){ const s=ilmiState[side].sciences.find(s=>s.id===sciId); if(s){s.skills=s.skills.filter(sk=>sk.id!==skillId); saveIlmi(); renderIlmiContent();} }
+
+// ═══════════ FAWAIT ═══════════
+let fawaitData = (() => {
+  try { return JSON.parse(localStorage.getItem('bw_fawait')||'null') || {done:0,total:10,daily:2}; }
+  catch { return {done:0,total:10,daily:2}; }
+})();
+function saveFawait(){ localStorage.setItem('bw_fawait', JSON.stringify(fawaitData)); }
+function renderFawait(){
+  const done=document.getElementById('fw-done');
+  const remain=document.getElementById('fw-remain');
+  const days=document.getElementById('fw-days');
+  const bar=document.getElementById('fw-bar');
+  if(!done) return;
+  const d=fawaitData.done||0;
+  const t=fawaitData.total||0;
+  const daily=fawaitData.daily||1;
+  const r=Math.max(0,t-d);
+  const pct=t?Math.round(d/t*100):0;
+  const daysLeft=daily>0?Math.ceil(r/daily):0;
+  if(done) done.textContent=d;
+  if(remain) remain.textContent=r;
+  if(days) days.textContent=r===0?'✓':daysLeft;
+  if(bar) bar.style.width=pct+'%';
+  // Sync inputs
+  const ti=document.getElementById('fw-total-input');
+  const di=document.getElementById('fw-daily-input');
+  if(ti) ti.value=t||'';
+  if(di) di.value=daily||'';
+}
+function fawaitAdd(n){
+  fawaitData.done=Math.max(0,Math.min(fawaitData.total||999,fawaitData.done+n));
+  saveFawait(); renderFawait();
+}
+function fawaitToggleEdit(){
+  const grid=document.getElementById('fw-edit-grid');
+  if(grid) grid.classList.toggle('open');
+}
+function fawaitSaveSettings(){
+  const t=parseInt(document.getElementById('fw-total-input')?.value||'0');
+  const d=parseInt(document.getElementById('fw-daily-input')?.value||'1');
+  if(!isNaN(t)&&t>=0) fawaitData.total=t;
+  if(!isNaN(d)&&d>=1) fawaitData.daily=d;
+  fawaitData.done=Math.min(fawaitData.done,fawaitData.total);
+  saveFawait(); renderFawait();
+  document.getElementById('fw-edit-grid')?.classList.remove('open');
+}
+
+
+// ═══════════ MISSING FUNCTIONS RESTORED ═══════════
+
+// ── MODE TOGGLE ──
+function toggleMode(){
+  const isEdit = document.body.classList.toggle('edit-mode');
+  sv('bw_mode', isEdit ? 'edit' : 'view');
+  const btn = document.getElementById('mode-btn');
+  const icon = document.getElementById('mode-icon');
+  const lbl = document.getElementById('mode-label');
+  if(icon) icon.textContent = isEdit ? '👁' : '✏';
+  if(lbl) lbl.textContent = isEdit ? 'عرض' : 'تعديل';
+  if(btn) btn.classList.toggle('editing', isEdit);
+  if(!isEdit) document.querySelectorAll('.inline-form.open').forEach(f=>f.classList.remove('open'));
+}
+
+// ── NAV ──
+function switchTab(id){
+  activeTab = id; sv('bw_tab', id);
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id)?.classList.add('active');
+  renderNav();
+}
+
+function renderNav(){
+  const allG=[...deenGoals,...(STATIC_GOALS.mihani||[]),...(STATIC_GOALS.badani||[]),...(STATIC_GOALS.asri||[])];
+  const allD = deenGoals.filter(g=>g.done).length +
+    (STATIC_GOALS.mihani||[]).filter(g=>doneM[g.id]).length +
+    (STATIC_GOALS.badani||[]).filter(g=>doneBd[g.id]).length +
+    (STATIC_GOALS.asri||[]).filter(g=>doneAs[g.id]).length;
+  const pct = Math.round(allD/Math.max(allG.length,1)*100);
+  const nb = document.getElementById('navBar'); if(!nb) return;
+  nb.innerHTML = TABS.map(t=>{
+    const s = areaPct(t.id);
+    const cnt = s.total ? ` <span style="opacity:.4;font-size:10px">${s.done}/${s.total}</span>` : '';
+    const star = t.primary ? '<span class="star">★</span>' : '';
+    return `<button class="nav-tab ${t.primary?'primary-tab':''} ${t.id===activeTab?'active':''}" onclick="switchTab('${t.id}')">${star}${t.label}${cnt}</button>`;
+  }).join('') +
+  `<div style="margin-right:auto;display:flex;align-items:center;gap:8px;padding:7px 0">
+    <span style="font-size:11px;color:var(--text2)">${allD}/${allG.length}</span>
+    <div style="width:70px;height:3px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden">
+      <div style="height:100%;width:${pct}%;background:var(--gold);border-radius:2px"></div>
+    </div>
+    <span style="font-size:11px;color:var(--gold)">${pct}%</span>
+  </div>`;
+}
+
+function areaPct(id){
+  if(id==='deen'){ const done=deenGoals.filter(g=>g.done).length; return {done,total:deenGoals.length,pct:Math.round(done/Math.max(deenGoals.length,1)*100)}; }
+  if(id==='ilmi'||id==='mubsarat') return {done:0,total:0,pct:0};
+  const stores={mihani:doneM,badani:doneBd,asri:doneAs};
+  const goals=STATIC_GOALS[id]||[];
+  const store=stores[id]||{};
+  const done=goals.filter(g=>store[g.id]).length;
+  return {done,total:goals.length,pct:Math.round(done/Math.max(goals.length,1)*100)};
+}
+
+// ── QUOTES ──
+function addQuote(){
+  const text=document.getElementById('new-q-text')?.value.trim(); if(!text) return;
+  const src=document.getElementById('new-q-src')?.value.trim()||'';
+  quotesData.push({id:Date.now()+'',text,src});
+  sv('bw_quotes',quotesData);
+  if(document.getElementById('new-q-text')) document.getElementById('new-q-text').value='';
+  if(document.getElementById('new-q-src')) document.getElementById('new-q-src').value='';
+  closeForm('quote-form'); renderQuotes();
+}
+function delQuote(id){ quotesData=quotesData.filter(q=>q.id!==id); sv('bw_quotes',quotesData); renderQuotes(); }
+function renderQuotes(){
+  var el=document.getElementById('quotes-list'); if(!el) return;
+  if(!quotesData.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:6px 0">اضف مبصراتك هنا</div>'; return; }
+  var html='';
+  for(var i=0;i<quotesData.length;i++){
+    var q=quotesData[i];
+    var txt=q.text.replace(/\n/g,'<br>');
+    html+='<div class="quote-item"><div class="quote-bar"></div><div class="quote-body"><div class="quote-text">'+txt+'</div>';
+    if(q.src) html+='<div class="quote-src">— '+q.src+'</div>';
+    html+='</div><button class="skill-del" onclick="delQuote(\''+q.id+'\')">✕</button></div>';
+  }
+  el.innerHTML=html;
+}
+
+// ── MEDIA ──
+function addMedia(){
+  const title=document.getElementById('new-m-title')?.value.trim(); if(!title) return;
+  const url=document.getElementById('new-m-url')?.value.trim()||'';
+  mediaData.push({id:Date.now()+'',title,url});
+  sv('bw_media',mediaData);
+  if(document.getElementById('new-m-title')) document.getElementById('new-m-title').value='';
+  if(document.getElementById('new-m-url')) document.getElementById('new-m-url').value='';
+  closeForm('media-form'); renderMedia();
+}
+function delMedia(id){ mediaData=mediaData.filter(m=>m.id!==id); sv('bw_media',mediaData); renderMedia(); }
+function renderMedia(){
+  const el=document.getElementById('media-list'); if(!el) return;
+  el.innerHTML=mediaData.map(m=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><a class="media-item" style="flex:1" href="${m.url||'#'}" target="_blank"><div class="media-icon">▶</div><div class="media-title">${m.title}</div></a><button class="skill-del" onclick="delMedia('${m.id}')">✕</button></div>`).join('');
+}
+
+// ── SIRAH ──
+function addSirah(){
+  const title=document.getElementById('new-s-title')?.value.trim(); if(!title) return;
+  const details=document.getElementById('new-s-details')?.value.trim()||'';
+  const url=document.getElementById('new-s-url')?.value.trim()||'';
+  sirahData.push({id:Date.now()+'',title,details,url});
+  sv('bw_sirah',sirahData);
+  ['new-s-title','new-s-details','new-s-url'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  closeForm('sirah-form'); renderSirah();
+}
+function delSirah(id){ sirahData=sirahData.filter(s=>s.id!==id); sv('bw_sirah',sirahData); renderSirah(); }
+function renderSirah(){
+  const el=document.getElementById('sirah-list'); if(!el) return;
+  if(!sirahData.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:6px 0">أضف سير العلماء والأئمة والهداة...</div>'; return; }
+  el.innerHTML=sirahData.map(s=>`<div class="sirah-item"><div class="sirah-name">⬡ ${s.title}<button class="skill-del" style="margin-right:auto" onclick="delSirah('${s.id}')">✕</button></div>${s.details?`<div class="sirah-details">${s.details}</div>`:''} ${s.url?`<a class="sirah-link" href="${s.url}" target="_blank">↗ رابط</a>`:''}</div>`).join('');
+}
+
+// ── ASPIRATIONS ──
+function addAspir(){
+  const text=document.getElementById('new-aspir')?.value.trim(); if(!text) return;
+  aspirData.push({id:Date.now()+'',text});
+  sv('bw_aspir',aspirData);
+  if(document.getElementById('new-aspir')) document.getElementById('new-aspir').value='';
+  closeForm('aspir-form'); renderAspir();
+}
+function delAspir(id){ aspirData=aspirData.filter(a=>a.id!==id); sv('bw_aspir',aspirData); renderAspir(); }
+function renderAspir(){
+  const el=document.getElementById('aspir-list'); if(!el) return;
+  el.innerHTML=aspirData.map(a=>`<div class="aspir-item"><span class="aspir-dot">◆</span><span class="aspir-text">${a.text}</span><button class="skill-del" onclick="delAspir('${a.id}')">✕</button></div>`).join('');
+}
+
+// ── BOOKS ──
+const catColors={'إسلامي':'#c9a227','تزكية':'#c45028','علم نفس':'#7c5cbf','تطوير ذات':'#2d7dd2','مالي':'#1a8f68','مهني':'#1a6e8f','أدب':'#888'};
+function addBook(){
+  const title=document.getElementById('new-b-title')?.value.trim(); if(!title) return;
+  const author=document.getElementById('new-b-author')?.value.trim()||'';
+  const url=document.getElementById('new-b-url')?.value.trim()||'';
+  const cat=document.getElementById('new-b-cat')?.value||'إسلامي';
+  const status=document.getElementById('new-b-status')?.value||'سأقرأه';
+  booksData.push({id:Date.now()+'',title,author,cat,status,url});
+  sv('bw_books',booksData);
+  ['new-b-title','new-b-author','new-b-url'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  closeForm('book-form'); renderBooks();
+}
+function delBook(id){ booksData=booksData.filter(b=>b.id!==id); sv('bw_books',booksData); renderBooks(); }
+function renderBooks(){
+  const el=document.getElementById('books-list'); if(!el) return;
+  el.innerHTML=`<div class="books-grid">`+booksData.map(b=>{
+    const col=catColors[b.cat]||'#888';
+    const st=b.status==='جارٍ'?'#1a8f68':b.status==='أكملته'?'#c9a227':'var(--text3)';
+    return `<div class="book-item"><div class="book-cat" style="color:${col}">${b.cat}</div>${b.url?`<a href="${b.url}" target="_blank" style="text-decoration:none"><div class="book-title" style="color:var(--gold)">${b.title} ↗</div></a>`:`<div class="book-title">${b.title}</div>`}<div class="book-author">${b.author}</div><div style="font-size:10px;color:${st};margin-top:3px">${b.status}</div><button class="skill-del" onclick="delBook('${b.id}')">✕</button></div>`;
+  }).join('')+`</div>`;
+}
+
+// ── EF INLINE (needed for ef-inline click in view mode guard) ──
+function efInlineEdit(id){ efInEdit(id); }
+
+
+
+// ═══════════ ARTICLES ═══════════
+const DEFAULT_ARTICLES = [
+  {
+    id:'art1',
+    title:'مشابهة التغيير لحفظ القرآن والشعر',
+    content:'إنك وأنت تقرأ القرآن وتصل عند آية معينة، تقفز في ذهنك آية أخرى بشكل تلقائي — وهي ليست الآية الصحيحة بل هي آية أخرى.\n\nوقد تحاول تثبيت الصحيحة، ولكنها لا تثبت إلا بصعوبة. وقد يخطئ الإنسان ويحاول تثبيتها في مجلس واحد، وهذا لا يتم إلا بالتكرار المتباعد.\n\nفكذلك التغيير — لا يتم إلا بالتكرار الدائم للجديد على فترة زمنية كبيرة.',
+    open:false,
+    date:'٢٠٢٦',
+    tags:['مقال']
+  },
+  {
+    id:'art2',
+    title:"\u0645\u0638\u0627\u0647\u0631 \u0627\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0642\u064a\u0648\u0645 \u0648\u0645\u0638\u0627\u0647\u0631 \u0627\u0644\u0639\u0646\u0627\u064a\u0629 \u0641\u064a \u0642\u0635\u0629 \u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0643\u0647\u0641",
+    content:"\u0642\u0627\u0644 \u062a\u0639\u0627\u0644\u0649: \u06de \u0648\u064e\u062a\u064e\u0631\u064e\u0649 \u0627\u0644\u0634\u064e\u0651\u0645\u0652\u0633\u064e \u0625\u0650\u0630\u064e\u0627 \u0637\u064e\u0644\u064e\u0639\u064e\u062a \u062a\u064e\u0651\u0632\u064e\u0627\u0648\u064e\u0631\u064f \u0639\u064e\u0646 \u0643\u064e\u0647\u0652\u0641\u0650\u0647\u0650\u0645\u0652 \u0630\u064e\u0627\u062a\u064e \u0627\u0644\u0652\u064a\u064e\u0645\u0650\u064a\u0646\u0650 \u0648\u064e\u0625\u0650\u0630\u064e\u0627 \u063a\u064e\u0631\u064e\u0628\u064e\u062a \u062a\u064e\u0651\u0642\u0652\u0631\u0650\u0636\u064f\u0647\u064f\u0645\u0652 \u0630\u064e\u0627\u062a\u064e \u0627\u0644\u0634\u0650\u0651\u0645\u064e\u0627\u0644\u0650 \u0648\u064e\u0647\u064f\u0645\u0652 \u0641\u0650\u064a \u0641\u064e\u062c\u0652\u0648\u064e\u0629\u064d \u0645\u0650\u0651\u0646\u0652\u0647\u064f \u06da \u0630\u064e\u0670\u0644\u0650\u0643\u064e \u0645\u0650\u0646\u0652 \u0622\u064a\u064e\u0627\u062a\u0650 \u0627\u0644\u0644\u064e\u0651\u0647\u0650 \u06d7 \u0645\u064e\u0646 \u064a\u064e\u0647\u0652\u062f\u0650 \u0627\u0644\u0644\u064e\u0651\u0647\u064f \u0641\u064e\u0647\u064f\u0648\u064e \u0627\u0644\u0652\u0645\u064f\u0647\u0652\u062a\u064e\u062f\u0650 \u06d6 \u0648\u064e\u0645\u064e\u0646 \u064a\u064f\u0636\u0652\u0644\u0650\u0644\u0652 \u0641\u064e\u0644\u064e\u0646 \u062a\u064e\u062c\u0650\u062f\u064e \u0644\u064e\u0647\u064f \u0648\u064e\u0644\u0650\u064a\u064b\u0651\u0627 \u0645\u064f\u0651\u0631\u0652\u0634\u0650\u062f\u064b\u0627 (17) \u0648\u064e\u062a\u064e\u062d\u0652\u0633\u064e\u0628\u064f\u0647\u064f\u0645\u0652 \u0623\u064e\u064a\u0652\u0642\u064e\u0627\u0638\u064b\u0627 \u0648\u064e\u0647\u064f\u0645\u0652 \u0631\u064f\u0642\u064f\u0648\u062f\u064c \u06da \u0648\u064e\u0646\u064f\u0642\u064e\u0644\u0650\u0651\u0628\u064f\u0647\u064f\u0645\u0652 \u0630\u064e\u0627\u062a\u064e \u0627\u0644\u0652\u064a\u064e\u0645\u0650\u064a\u0646\u0650 \u0648\u064e\u0630\u064e\u0627\u062a\u064e \u0627\u0644\u0634\u0650\u0651\u0645\u064e\u0627\u0644\u0650 \u06d6 \u0648\u064e\u0643\u064e\u0644\u0652\u0628\u064f\u0647\u064f\u0645 \u0628\u064e\u0627\u0633\u0650\u0637\u064c \u0630\u0650\u0631\u064e\u0627\u0639\u064e\u064a\u0652\u0647\u0650 \u0628\u0650\u0627\u0644\u0652\u0648\u064e\u0635\u0650\u064a\u062f\u0650 \u06da \u0644\u064e\u0648\u0650 \u0627\u0637\u064e\u0651\u0644\u064e\u0639\u0652\u062a\u064e \u0639\u064e\u0644\u064e\u064a\u0652\u0647\u0650\u0645\u0652 \u0644\u064e\u0648\u064e\u0644\u064e\u0651\u064a\u0652\u062a\u064e \u0645\u0650\u0646\u0652\u0647\u064f\u0645\u0652 \u0641\u0650\u0631\u064e\u0627\u0631\u064b\u0627 \u0648\u064e\u0644\u064e\u0645\u064f\u0644\u0650\u0626\u0652\u062a\u064e \u0645\u0650\u0646\u0652\u0647\u064f\u0645\u0652 \u0631\u064f\u0639\u0652\u0628\u064b\u0627...\n\n\u0643\u0646\u062a \u0623\u062a\u062d\u064a\u0651\u0631 \u0642\u062f\u064a\u0645\u064b\u0627 \u2014 \u0648\u0644\u064a\u0633 \u0627\u0639\u062a\u0631\u0627\u0636\u064b\u0627 \u2014 \u0644\u0645\u0627\u0630\u0627 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 \u0639\u0632 \u0648\u062c\u0644 \u0644\u0645 \u064a\u0648\u0642\u0641 \u0627\u0644\u0632\u0645\u0646 \u0639\u0644\u064a\u0647\u0645 \u062d\u064a\u0646\u0645\u0627 \u0646\u0627\u0645\u0648\u0627\u060c \u0643\u0645\u0627 \u0642\u0627\u0644 \u0627\u0644\u0628\u0639\u0636 \u2014 \u0648\u0642\u0648\u0644\u0647\u0645 \u062e\u0637\u0623 \u2014 \u0648\u064a\u0646\u0642\u0644\u0647\u0645 \u0645\u0646 \u0632\u0645\u0646 \u0644\u0632\u0645\u0646 \u0643\u0645\u0627 \u0646\u0631\u0649 \u0641\u064a \u0623\u0641\u0644\u0627\u0645 \u0627\u0644\u062e\u064a\u0627\u0644 \u0627\u0644\u0639\u0644\u0645\u064a \u062d\u064a\u0646 \u064a\u062f\u062e\u0644 \u0627\u0644\u0645\u0645\u062b\u0644 \u0641\u064a \u0622\u0644\u0629 \u0627\u0644\u0632\u0645\u0646 \u0641\u062a\u0646\u0642\u0644\u0647 \u0625\u0644\u0649 \u0639\u0635\u0631 \u0622\u062e\u0631. \u0648\u0644\u0623\u0646 \u0643\u0644 \u0625\u0646\u0633\u0627\u0646 \u064a\u064f\u0639\u0638\u0650\u0651\u0645 \u0641\u062a\u0646\u0629 \u0639\u0635\u0631\u0647\u060c \u0648\u0644\u0623\u0646 \u0633\u0644\u0637\u0627\u0646 \u0627\u0644\u0639\u0644\u0645\u0648\u0646\u064a\u0629 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0639\u0635\u0631 \u0623\u0628\u0644\u063a \u0645\u0627 \u064a\u0643\u0648\u0646\u060c \u0641\u0643\u0627\u0646 \u0627\u0644\u0642\u0644\u0628 \u064a\u0645\u064a\u0644 \u0625\u0644\u0649 \u062a\u0639\u0638\u064a\u0645 \u0627\u0644\u062a\u0635\u0648\u0631\u0627\u062a \u0627\u0644\u062a\u064a \u0646\u0634\u0623 \u0639\u0644\u064a\u0647\u0627. \u0641\u0643\u0646\u062a \u0623\u0631\u0649 \u0647\u0630\u0627 \u0627\u0644\u0625\u0634\u0643\u0627\u0644.\n\n\u0648\u0628\u0639\u062f \u0623\u0646 \u0647\u062f\u0627\u0646\u064a \u0627\u0644\u0644\u0647 \u0628\u0623\u0646 \u0639\u0644\u0645\u062a \u0623\u0646 \u0627\u0644\u0639\u0644\u0645 \u0628\u0647 \u0623\u0634\u0631\u0641 \u0627\u0644\u0639\u0644\u0648\u0645\u060c \u0648\u0645\u0627 \u062e\u064f\u0644\u0642\u062a \u0627\u0644\u0633\u0645\u0627\u0648\u0627\u062a \u0648\u0627\u0644\u0623\u0631\u0636 \u0625\u0644\u0627 \u0628\u0627\u0644\u062d\u0642\u060c \u0648\u0623\u0646 \u0627\u0644\u062a\u0633\u0628\u064a\u062d\u0629 \u0627\u0644\u0648\u0627\u062d\u062f\u0629 \u062e\u064a\u0631 \u0645\u0646 \u0643\u0644 \u0623\u0645\u0648\u0631 \u0627\u0644\u062f\u0646\u064a\u0627 \u2014 \u0641\u0634\u0631\u0641 \u0627\u0644\u0639\u0644\u0645 \u0645\u0646 \u0634\u0631\u0641 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u060c \u0641\u0643\u0627\u0646 \u0627\u0644\u0639\u0644\u0645 \u0628\u0627\u0644\u0644\u0647 \u0623\u0634\u0631\u0641 \u0627\u0644\u0639\u0644\u0648\u0645.\n\n\u0648\u0628\u0639\u062f \u0623\u0646 \u0639\u0644\u0645\u062a \u0639\u0644\u0645\u064b\u0627 \u062c\u0627\u0632\u0645\u064b\u0627 \u0623\u0646 \u0645\u0627 \u0641\u064a \u0643\u062a\u0627\u0628 \u0627\u0644\u0644\u0647 \u0627\u0644\u0645\u0646\u0638\u0648\u0631 \u0625\u0644\u0627 \u0645\u0627 \u0647\u0648 \u062f\u0627\u0644\u064c\u0651 \u0639\u0644\u0649 \u0635\u0641\u0627\u062a\u0647 \u0648\u0645\u0638\u0627\u0647\u0631 \u0642\u062f\u0631\u062a\u0647 \u0648\u0639\u0646\u0627\u064a\u062a\u0647 \u0628\u062e\u0644\u0642\u0647\u060c \u0648\u0647\u0630\u0627 \u0645\u0627 \u064a\u062f\u0644\u0646\u0627 \u0627\u0644\u0644\u0647 \u0639\u0644\u064a\u0647 \u0641\u064a \u0643\u062a\u0627\u0628\u0647 \u0627\u0644\u0645\u0633\u0637\u0648\u0631:\n(\u0642\u064f\u0644\u0650 \u0627\u0646\u0652\u0638\u064f\u0631\u064f\u0648\u0627 \u0645\u064e\u0627\u0630\u064e\u0627 \u0641\u0650\u064a \u0627\u0644\u0633\u064e\u0651\u0645\u064e\u0627\u0648\u064e\u0627\u062a\u0650 \u0648\u064e\u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650)\n(\u0623\u064e\u0641\u064e\u0644\u064e\u0645\u0652 \u064a\u064e\u0633\u0650\u064a\u0631\u064f\u0648\u0627 \u0641\u0650\u064a \u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650 \u0641\u064e\u064a\u064e\u0646\u0638\u064f\u0631\u064f\u0648\u0627 \u0643\u064e\u064a\u0652\u0641\u064e \u0628\u064e\u062f\u064e\u0623\u064e \u0627\u0644\u0652\u062e\u064e\u0644\u0652\u0642\u064e)\n(\u0625\u0650\u0646\u064e\u0651 \u0641\u0650\u064a \u062e\u064e\u0644\u0652\u0642\u0650 \u0627\u0644\u0633\u064e\u0651\u0645\u064e\u0627\u0648\u064e\u0627\u062a\u0650 \u0648\u064e\u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650 \u0648\u064e\u0627\u062e\u0652\u062a\u0650\u0644\u064e\u0627\u0641\u0650 \u0627\u0644\u0644\u064e\u0651\u064a\u0652\u0644\u0650 \u0648\u064e\u0627\u0644\u0646\u064e\u0651\u0647\u064e\u0627\u0631\u0650 \u0644\u064e\u0622\u064a\u064e\u0627\u062a\u064d \u0644\u0650\u0623\u064f\u0648\u0644\u0650\u064a \u0627\u0644\u0652\u0623\u064e\u0644\u0652\u0628\u064e\u0627\u0628\u0650)\n\n\u0627\u0646\u0638\u0631 \u0625\u0644\u0649 \u062d\u0628\u0627\u062a \u0627\u0644\u0623\u0631\u0632 \u2014 \u062d\u062a\u0649 \u062a\u0643\u0645\u0644 \u0637\u0628\u0642\u064b\u0627 \u062a\u062d\u062a\u0627\u062c \u0625\u0644\u0649 \u0622\u0644\u0627\u0641 \u0627\u0644\u062d\u0628\u0627\u062a. \u0644\u0648 \u0634\u0627\u0621 \u0627\u0644\u0644\u0647 \u0644\u062c\u0639\u0644\u0647\u0627 \u062d\u0628\u0629 \u0643\u0628\u064a\u0631\u0629 \u062a\u0643\u0641\u064a \u0639\u0648\u0636\u064b\u0627 \u0639\u0646 \u0627\u0644\u062d\u0628\u0627\u062a \u0627\u0644\u0635\u063a\u064a\u0631\u0629 \u0627\u0644\u0643\u062b\u064a\u0631\u0629\u060c \u0648\u0644\u0643\u0646 \u0625\u0628\u0644\u0627\u063a\u064b\u0627 \u0641\u064a \u0627\u0644\u0646\u0639\u0645\u0629 \u0648\u0625\u0628\u0644\u0627\u063a\u064b\u0627 \u0641\u064a \u0645\u0638\u0627\u0647\u0631 \u0627\u0644\u0639\u0646\u0627\u064a\u0629\u060c \u0641\u0631\u064e\u0651\u0642 \u0646\u0639\u0645\u0629 \u0627\u0644\u0644\u0647 \u0641\u064a \u0643\u0644 \u062d\u0628\u0629. \u0648\u062a\u0631\u0649 \u0639\u0646\u0627\u064a\u062a\u0647 \u0623\u0646 \u062c\u0645\u0639 \u0644\u0643 \u0622\u0644\u0627\u0641 \u0627\u0644\u062d\u0628\u0627\u062a \u062d\u0628\u0629\u064b \u062d\u0628\u0629\u064b \u062a\u062a\u0631\u0627\u0635\u0651 \u0641\u064a \u0637\u0628\u0642\u0643. \u0641\u062a\u0631\u0649 \u0623\u0646\u0647 \u0644\u0637\u064a\u0641 \u062e\u0628\u064a\u0631 \u064a\u064f\u062f\u0628\u0650\u0651\u0631 \u0639\u0644\u0649 \u0645\u0633\u062a\u0648\u0649 \u062d\u0628\u0627\u062a \u0627\u0644\u0623\u0631\u0632\u060c \u0628\u0644 \u0639\u0644\u0649 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0630\u0631\u0627\u062a\u060c \u0628\u0644 \u0639\u0644\u0649 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0628\u0631\u0648\u062a\u0648\u0646 \u0648\u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646. \u0648\u062a\u0631\u0649 \u0642\u064a\u0627\u0645\u0647 \u0628\u0634\u0626\u0648\u0646 \u062e\u0644\u0642\u0647 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0645\u0633\u062a\u0648\u064a\u0627\u062a \u0627\u0644\u062a\u064a \u0644\u0627 \u062a\u064f\u0631\u0649 \u062d\u062a\u0649 \u0628\u0623\u062d\u062f\u062b \u0627\u0644\u0645\u064a\u0643\u0631\u0648\u0633\u0643\u0648\u0628 \u2014 \u0641\u0647\u0648 \u0627\u0644\u062d\u064a \u0627\u0644\u0630\u064a \u0644\u0627 \u064a\u0645\u0648\u062a\u060c \u0627\u0644\u0642\u064a\u0648\u0645 \u0639\u0644\u0649 \u0634\u0626\u0648\u0646 \u062e\u0644\u0642\u0647 \u0641\u064a \u0643\u0644 \u0644\u062d\u0638\u0629.\n\n\u0648\u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0643\u0647\u0641 \u0644\u0645\u0627 \u0627\u0639\u062a\u0632\u0644\u0648\u0627 \u0642\u0648\u0645\u0647\u0645 \u0648\u0641\u0631\u0651\u0648\u0627 \u0625\u0644\u0649 \u0631\u0628\u0647\u0645 \u0648\u0623\u0648\u0648\u0627 \u0625\u0644\u064a\u0647\u060c \u0643\u0627\u0646 \u0633\u0628\u062d\u0627\u0646\u0647 \u0646\u0639\u0645 \u0627\u0644\u0645\u0648\u0644\u0649 \u0648\u0646\u0639\u0645 \u0627\u0644\u0646\u0635\u064a\u0631 \u0648\u0623\u0643\u0631\u0645 \u0627\u0644\u0623\u0643\u0631\u0645\u064a\u0646. \u0641\u0644\u0645\u0627 \u062f\u0639\u0648\u0647 \u0628\u0623\u0646\u0647 \u0631\u0628 \u0627\u0644\u0633\u0645\u0627\u0648\u0627\u062a \u0648\u0627\u0644\u0623\u0631\u0636 \u0639\u0644\u0649 \u0639\u0638\u0645\u062a\u0647\u0645\u0627 \u0648\u0647\u0648 \u0641\u0627\u0637\u0631\u0647\u0645\u0627 \u0648\u0645\u062f\u0628\u0631\u0647\u0645\u0627\u060c \u0648\u0623\u064a\u0642\u0646\u0648\u0627 \u0628\u0630\u0644\u0643 \u0641\u062e\u0636\u0639\u0648\u0627 \u0644\u0647 \u0628\u0627\u0644\u0639\u0628\u0648\u062f\u064a\u0629 \u0648\u0623\u0641\u0631\u062f\u0648\u0647 \u0628\u0627\u0644\u0623\u0644\u0648\u0647\u064a\u0629: (\u0644\u064e\u0646 \u0646\u064e\u0651\u062f\u0652\u0639\u064f\u0648\u064e \u0645\u0650\u0646 \u062f\u064f\u0648\u0646\u0650\u0647\u0650 \u0625\u0650\u0644\u064e\u0670\u0647\u064b\u0627 \u0644\u064e\u0651\u0642\u064e\u062f\u0652 \u0642\u064f\u0644\u0652\u0646\u064e\u0627 \u0625\u0650\u0630\u064b\u0627 \u0634\u064e\u0637\u064e\u0637\u064b\u0627) \u2014 \u0641\u0644\u0645\u0627 \u0623\u064a\u0642\u0646\u0648\u0627 \u0623\u0646\u0647 \u0631\u0628 \u0627\u0644\u0633\u0645\u0627\u0648\u0627\u062a \u0648\u0627\u0644\u0623\u0631\u0636 \u0648\u0623\u0646\u0647 \u0628\u064a\u062f\u0647 \u0627\u0644\u0633\u0646\u0646 \u0627\u0644\u0643\u0648\u0646\u064a\u0629\u060c \u062c\u0639\u0644 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 \u0644\u0647\u0645 \u0633\u0646\u064b\u0646\u064b\u0627 \u062e\u0627\u0635\u0629.\n\n\u0641\u0643\u0627\u0646\u062a \u0639\u0646\u0627\u064a\u062a\u0647 \u0628\u0627\u0644\u0643\u0648\u0646 \u0639\u0627\u0645\u0629 \u0648\u0639\u0646\u0627\u064a\u062a\u0647 \u0628\u0647\u0624\u0644\u0627\u0621 \u0627\u0644\u0641\u062a\u064a\u0629 \u062e\u0627\u0635\u0629. \u0641\u063a\u0634\u064a\u0647\u0645 \u0627\u0644\u0646\u0648\u0645 \u062b\u0644\u0627\u062b\u0645\u0627\u0626\u0629 \u0633\u0646\u0629 \u064a\u064f\u0642\u0644\u0650\u0651\u0628\u0647\u0645 \u0630\u0627\u062a \u0627\u0644\u064a\u0645\u064a\u0646 \u0648\u0630\u0627\u062a \u0627\u0644\u0634\u0645\u0627\u0644 \u062d\u062a\u0649 \u0644\u0627 \u062a\u062a\u0636\u0631\u0631 \u0623\u0628\u062f\u0627\u0646\u0647\u0645. \u0648\u0644\u0648 \u0634\u0627\u0621 \u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646 \u0644\u0645\u0627 \u062c\u0639\u0644 \u0623\u0628\u062f\u0627\u0646\u0647\u0645 \u062a\u062a\u0636\u0631\u0631 \u0628\u0627\u0644\u0646\u0648\u0645 \u0639\u0644\u0649 \u062c\u0646\u0628 \u0648\u0627\u062d\u062f\u060c \u0648\u0644\u0643\u0646 \u0630\u0644\u0643 \u0623\u0628\u0644\u063a \u0641\u064a \u0627\u0644\u0646\u0639\u0645\u0629 \u0648\u0641\u064a \u0645\u0638\u0627\u0647\u0631 \u0642\u064a\u0648\u0645\u064a\u062a\u0647 \u0644\u0647\u0645 \u0641\u064a \u0643\u0644 \u0644\u064a\u0644\u0629 \u0648\u0641\u064a \u0643\u0644 \u0644\u062d\u0638\u0629 \u0648\u0641\u064a \u0643\u0644 \u0641\u0639\u0644 \u0637\u0648\u0627\u0644 \u062b\u0644\u0627\u062b\u0645\u0627\u0626\u0629 \u0633\u0646\u0629.",
+    open:false,
+    date:'٢٠٢٦',
+    tags:['تدبر']
+  }
+];
+
+let articlesData = (() => {
+  try { return JSON.parse(localStorage.getItem('bw_articles')||'null') || JSON.parse(JSON.stringify(DEFAULT_ARTICLES)); }
+  catch { return JSON.parse(JSON.stringify(DEFAULT_ARTICLES)); }
+})();
+
+function saveArticles(){ localStorage.setItem('bw_articles', JSON.stringify(articlesData)); }
+
+function toggleArticle(id){
+  const a = articlesData.find(a=>a.id===id);
+  if(a){ a.open=!a.open; saveArticles(); renderArticles(); }
+}
+
+function addArticle(){
+  const title = document.getElementById('new-art-title')?.value.trim();
+  const content = document.getElementById('new-art-content')?.value.trim();
+  if(!title) return;
+  const tagsRaw = document.getElementById('new-art-tags')?.value||'';
+  const tags = tagsRaw.split(',').map(t=>t.trim()).filter(t=>t.length>0);
+  const now = new Date();
+  const date = now.getFullYear()+'';
+  articlesData.unshift({id:Date.now()+'', title, content:content||'', open:true, date, tags});
+  saveArticles();
+  document.getElementById('new-art-title').value='';
+  document.getElementById('new-art-content').value='';
+  if(document.getElementById('new-art-tags')) document.getElementById('new-art-tags').value='';
+  closeForm('article-form');
+  renderArticles();
+}
+
+function delArticle(id){
+  articlesData = articlesData.filter(a=>a.id!==id);
+  saveArticles(); renderArticles();
+}
+
+let activeTagFilter = 'all';
+
+function getAllTags(){
+  const tags = new Set();
+  articlesData.forEach(a=>{ (a.tags||[]).forEach(t=>tags.add(t.trim())); });
+  return Array.from(tags);
+}
+
+function renderTagFilter(){
+  const el = document.getElementById('art-tag-filter'); if(!el) return;
+  const tags = getAllTags();
+  if(!tags.length){ el.innerHTML=''; return; }
+  el.innerHTML = `<button class="tag-filter-btn ${activeTagFilter==='all'?'active':''}" onclick="setTagFilter('all')">الكل</button>` +
+    tags.map(t=>`<button class="tag-filter-btn ${activeTagFilter===t?'active':''}" onclick="setTagFilter('${t}')">${t}</button>`).join('');
+}
+
+function setTagFilter(tag){
+  activeTagFilter=tag; renderTagFilter(); renderArticles();
+}
+
+function renderArticles(){
+  const el = document.getElementById('articles-list'); if(!el) return;
+  const filtered = activeTagFilter==='all' ? articlesData : articlesData.filter(a=>(a.tags||[]).includes(activeTagFilter));
+  renderTagFilter();
+  if(!filtered.length){
+    el.innerHTML='<div style="font-size:12px;color:var(--text3);padding:6px 0">لا توجد مقالات في هذا الوسم</div>';
+    return;
+  }
+  const tagClass = t => t==='تدبر'?'tadabbur':t==='مقال'?'maqal':'';
+  el.innerHTML = filtered.map(a=>{
+    const preview = a.content ? a.content.substring(0,80).replace(/\n/g,' ')+'...' : '';
+    const tagsHtml = (a.tags||[]).length ? `<div class="art-tags">${(a.tags||[]).map(t=>`<span class="art-tag ${tagClass(t)}">${t}</span>`).join('')}</div>` : '';
+    return '<div class="article-card">' +
+      '<div class="article-hdr" onclick="toggleArticle(\'' + a.id + '\')">' +
+        '<span class="article-arrow ' + (a.open?'open':'') + '">▶</span>' +
+        '<div style="flex:1">' +
+          '<div class="article-title">' + a.title + '</div>' +
+          tagsHtml +
+          (!a.open && preview ? '<div style="font-size:11px;color:var(--text3);margin-top:3px;font-family:IBM Plex Sans Arabic,sans-serif">' + preview + '</div>' : '') +
+        '</div>' +
+        '<span class="article-meta">' + (a.date||'') + '</span>' +
+        '<button class="article-del skill-del" onclick="event.stopPropagation();delArticle(\'' + a.id + '\')">✕</button>' +
+      '</div>' +
+      '<div class="article-body ' + (a.open?'open':'') + '">' +
+        '<div class="article-content">' + a.content.replace(/\n/g,'<br>') + '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+
+// ═══════════ MIHANI TASKS ═══════════
+const DEFAULT_MTASKS = [
+  {id:'mt1',text:'عمل Portfolio احترافي على GitHub',done:false},
+  {id:'mt2',text:'ضبط المشاريع الموجودة على GitHub والنظر في إضافة مشاريع جديدة',done:false},
+  {id:'mt3',text:'البحث عن وظائف في كل مكان — سعودي وخليجي وعالمي',done:false},
+  {id:'mt4',text:'ضبط LinkedIn بالمعلومات الصحيحة (عنوان، مهارات، خبرات) وفق ما يرضي الـ HR',done:false},
+  {id:'mt5',text:'اختيار موقع عمل حر وتهيئة الملف الشخصي عليه',done:false},
+];
+
+let mTasksData = (() => {
+  try {
+    const raw = localStorage.getItem('bw_mtasks');
+    if(!raw || raw === '[object Object]') throw new Error();
+    return JSON.parse(raw);
+  } catch { return JSON.parse(JSON.stringify(DEFAULT_MTASKS)); }
+})();
+
+function saveMTasks(){ localStorage.setItem('bw_mtasks', JSON.stringify(mTasksData)); }
+
+function addMTask(){
+  const text = document.getElementById('new-mtask')?.value.trim();
+  if(!text) return;
+  mTasksData.push({id:Date.now()+'', text, done:false});
+  saveMTasks();
+  if(document.getElementById('new-mtask')) document.getElementById('new-mtask').value='';
+  closeForm('mihani-task-form');
+  renderMTasks();
+}
+
+function toggleMTask(id){
+  const t = mTasksData.find(t=>t.id===id);
+  if(t){ t.done=!t.done; saveMTasks(); renderMTasks(); }
+}
+
+function delMTask(id){
+  mTasksData = mTasksData.filter(t=>t.id!==id);
+  saveMTasks(); renderMTasks();
+}
+
+function renderMTasks(){
+  const el = document.getElementById('mihani-tasks-list'); if(!el) return;
+  const done = mTasksData.filter(t=>t.done).length;
+  const pct = mTasksData.length ? Math.round(done/mTasksData.length*100) : 0;
+  let html = '<div class="prog-row"><span style="font-size:11px;color:var(--text2)">'+done+'/'+mTasksData.length+'</span><div class="prog-outer"><div class="prog-fill green-fill" style="width:'+pct+'%"></div></div><span style="font-size:11px;color:var(--text2)">'+pct+'%</span></div>';
+  mTasksData.forEach(function(t){
+    var cls = t.done ? 'done-task' : '';
+    html += '<div class="task-row ' + cls + '" onclick="toggleMTask(\'' + t.id + '\')">';
+    html += '<div class="chk ' + (t.done?'on':'') + '">' + (t.done?'✓':'') + '</div>';
+    html += '<div style="flex:1"><div class="goal-txt">' + t.text + '</div></div>';
+    html += '<button class="g-del" onclick="event.stopPropagation();delMTask(\'' + t.id + '\')">✕</button>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
 
 </script>
 </body>
