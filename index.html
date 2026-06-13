@@ -399,6 +399,95 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
 .task-row:hover{background:var(--bg3)}
 .task-row.done-task{background:var(--bg3);opacity:.6}
 .task-row.done-task .goal-txt{text-decoration:line-through;color:var(--text3)}
+
+/* ── WEEKLY ── */
+.wk-intro{background:linear-gradient(135deg,rgba(26,143,104,0.06),rgba(201,162,39,0.03));border:1px solid rgba(26,143,104,0.15);border-radius:12px;padding:16px;margin-bottom:14px}
+.wk-intro-t{font-size:13px;color:var(--text);margin-bottom:4px}
+.wk-intro-s{font-size:12px;color:var(--text2);line-height:1.7}
+.wk-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.wk-card:hover{border-color:var(--border2)}
+.wk-hdr{display:flex;align-items:center;gap:10px;padding:13px 16px;cursor:pointer}
+.wk-arrow{font-size:11px;color:var(--text3);transition:transform .25s;flex-shrink:0}
+.wk-arrow.open{transform:rotate(90deg)}
+.wk-type{font-size:10px;padding:2px 10px;border-radius:50px;flex-shrink:0}
+.wk-type.read{background:rgba(45,125,210,0.12);color:#2d7dd2}
+.wk-type.watch{background:rgba(196,80,40,0.12);color:#c45028}
+.wk-type.do{background:rgba(26,143,104,0.12);color:#1a8f68}
+.wk-type.learn{background:rgba(124,92,191,0.12);color:#7c5cbf}
+.wk-type.done2{background:rgba(201,162,39,0.12);color:var(--gold)}
+.wk-title{font-size:14px;color:var(--text);flex:1;line-height:1.4}
+.wk-date{font-size:10px;color:var(--text3);flex-shrink:0}
+.wk-body{display:none;padding:0 18px 16px;border-top:1px solid rgba(201,162,39,0.08)}
+.wk-body.open{display:block}
+.wk-content{font-size:13px;line-height:1.9;color:var(--text2);padding-top:12px;white-space:pre-wrap}
+.wk-link{font-size:11px;color:rgba(201,162,39,0.6);text-decoration:none;margin-top:10px;display:inline-block}
+.wk-link:hover{color:var(--gold)}
+
+#weekly-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+#weekly-overlay.open{display:flex}
+#weekly-box{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;padding:24px;width:100%;max-width:600px;margin:auto}
+#weekly-banner{max-width:940px;margin:18px auto 0;padding:0 18px}
+.wk-banner-btn{width:100%;background:linear-gradient(135deg,rgba(26,143,104,0.1),rgba(201,162,39,0.05));border:1px solid rgba(26,143,104,0.3);border-radius:14px;padding:16px 20px;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .2s;font-family:'IBM Plex Sans Arabic',sans-serif}
+.wk-banner-btn:hover{border-color:rgba(26,143,104,0.5);background:linear-gradient(135deg,rgba(26,143,104,0.14),rgba(201,162,39,0.06))}
+.wk-banner-icon{width:42px;height:42px;border-radius:10px;background:rgba(26,143,104,0.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.wk-banner-txt{flex:1;text-align:right}
+.wk-banner-t{font-size:15px;color:var(--text);font-weight:500;font-family:'Amiri',serif}
+.wk-banner-s{font-size:12px;color:var(--text2);margin-top:2px}
+.wk-banner-arrow{color:#1a8f68;font-size:16px}
+
+.week-group{margin-bottom:18px}
+.week-header{display:flex;align-items:center;gap:10px;padding:8px 0;margin-bottom:8px;border-bottom:1px solid rgba(201,162,39,0.12)}
+.week-range{font-size:13px;color:var(--gold);font-weight:500;font-family:'Amiri',serif}
+.week-review-badge{font-size:10px;padding:2px 10px;border-radius:50px;background:rgba(26,143,104,0.12);color:#1a8f68;border:1px solid rgba(26,143,104,0.2);margin-right:auto}
+.wk-day{font-size:10px;color:var(--text3);flex-shrink:0;min-width:42px}
+.wk-day.friday{color:#c45028}  /* الجمعة إجازة */
+.wk-day.saturday{color:#1a8f68;font-weight:600}  /* الأحد مراجعة */
+
+/* ── INSIGHT CARD ── */
+.insight-card{background:linear-gradient(135deg,rgba(201,162,39,0.06),rgba(26,143,104,0.03));border:1px solid rgba(201,162,39,0.2);border-right:3px solid var(--gold);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.insight-hdr{display:flex;align-items:center;gap:8px;padding:13px 16px;cursor:pointer}
+.insight-icon{font-size:15px}
+.insight-title{font-family:'Amiri',serif;font-size:15px;color:var(--gold);flex:1}
+.insight-arrow{font-size:11px;color:var(--text3);transition:transform .25s}
+.insight-arrow.open{transform:rotate(90deg)}
+.insight-body{display:none;padding:0 18px 16px}
+.insight-body.open{display:block}
+.insight-point{padding:10px 0;border-bottom:1px solid rgba(201,162,39,0.08)}
+.insight-point:last-child{border-bottom:none}
+.insight-point-t{font-size:13px;color:var(--text);font-weight:500;margin-bottom:5px}
+.insight-ayah{font-family:'Amiri',serif;font-size:15px;line-height:1.9;color:rgba(201,162,39,0.85);margin-bottom:4px}
+.insight-note{font-size:12px;color:var(--text2);line-height:1.7}
+
+.wk-close{background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;line-height:1}
+.wk-top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.wk-top-title{font-size:17px;font-family:'Amiri',serif;color:var(--text)}
+.wk-top-sub{font-size:12px;color:var(--text2);margin-bottom:16px}
+.wk-back{background:none;border:1px solid var(--border);border-radius:8px;color:var(--text2);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:12px;padding:5px 12px;cursor:pointer;transition:all .2s}
+.wk-back:hover{border-color:var(--border2);color:var(--text)}
+.weeks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.week-tile{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:14px;cursor:pointer;transition:all .2s;text-align:right;position:relative}
+.week-tile:hover{border-color:var(--gold);background:rgba(201,162,39,0.04)}
+.week-tile.current{border-color:rgba(26,143,104,0.4);background:rgba(26,143,104,0.04)}
+.week-tile-n{font-size:16px;font-family:'Amiri',serif;color:var(--gold);font-weight:500;margin-bottom:4px}
+.week-tile.current .week-tile-n{color:#1a8f68}
+.week-tile-range{font-size:11px;color:var(--text2);line-height:1.5}
+.week-tile-count{font-size:10px;color:var(--text3);margin-top:6px}
+.week-tile-badge{position:absolute;top:8px;left:8px;font-size:9px;padding:1px 7px;border-radius:50px;background:rgba(26,143,104,0.15);color:#1a8f68}
+.wk-load-more{width:100%;background:transparent;border:1px dashed var(--border);border-radius:8px;color:var(--text3);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:12px;padding:9px;cursor:pointer;margin-top:12px;transition:all .2s}
+.wk-load-more:hover{border-color:var(--border2);color:var(--text2)}
+
+/* ── WAJIB AL-WAQT ── */
+#wajib-banner{max-width:940px;margin:18px auto 0;padding:0 18px}
+.wajib-wrap{background:linear-gradient(135deg,rgba(201,162,39,0.08),rgba(196,80,40,0.04));border:1px solid rgba(201,162,39,0.25);border-radius:14px;padding:18px}
+.wajib-hdr{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.wajib-icon{font-size:18px}
+.wajib-title{font-family:'Amiri',serif;font-size:16px;color:var(--gold);flex:1}
+.wajib-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.wajib-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,162,39,0.2);border-radius:10px;padding:12px 14px;flex:1;min-width:200px;display:flex;align-items:flex-start;gap:8px}
+.wajib-num{font-family:'Amiri',serif;font-size:18px;color:var(--gold);opacity:.5;flex-shrink:0;line-height:1;margin-top:2px}
+.wajib-text{font-size:13px;color:var(--text);line-height:1.7;flex:1}
+.wajib-del{background:none;border:none;color:rgba(255,255,255,0.1);cursor:pointer;font-size:11px;padding:0 3px;flex-shrink:0}
+.wajib-del:hover{color:rgba(200,80,80,0.6)}
 </style>
 </head>
 <body>
@@ -428,6 +517,41 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
     </div>
     <button class="mq-edit-btn" onclick="editMQ()">✏</button>
   </div>
+</div>
+
+
+
+<!-- WAJIB AL-WAQT -->
+<div id="wajib-banner">
+  <div class="wajib-wrap">
+    <div class="wajib-hdr">
+      <span class="wajib-icon">⚡</span>
+      <span class="wajib-title">واجب الوقت</span>
+    </div>
+    <div class="wajib-grid" id="wajib-list"></div>
+    <div id="wajib-form" class="inline-form">
+      <div class="form-row">
+        <input class="fi" id="new-wajib" placeholder="أضف أولوية...">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="fi-save" onclick="addWajib()">إضافة</button>
+        <button class="fi-cancel" onclick="closeForm('wajib-form')">إلغاء</button>
+      </div>
+    </div>
+    <button class="add-btn" onclick="openForm('wajib-form')">+ إضافة</button>
+  </div>
+</div>
+
+<!-- WEEKLY BANNER -->
+<div id="weekly-banner">
+  <button class="wk-banner-btn" onclick="openWeekly()">
+    <div class="wk-banner-icon">📅</div>
+    <div class="wk-banner-txt">
+      <div class="wk-banner-t">مراجعتي الأسبوعية</div>
+      <div class="wk-banner-s">سجّل إنجازاتك وراجعها آخر الأسبوع</div>
+    </div>
+    <div class="wk-banner-arrow">‹</div>
+  </button>
 </div>
 
 <!-- NAV -->
@@ -479,6 +603,46 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
       <button class="fawait-btn plus" onclick="fawaitAdd(1)">✓ قضيت صلاة</button>
       <button class="fawait-btn minus" onclick="fawaitAdd(-1)">↩</button>
       <button class="fawait-btn ef-ta" onclick="fawaitToggleEdit()" style="border-color:var(--border);color:var(--text3)">⚙ إعدادات</button>
+    </div>
+  </div>
+
+  <div class="insight-card">
+    <div class="insight-hdr" onclick="document.getElementById('insight-body-deen').classList.toggle('open');this.querySelector('.insight-arrow').classList.toggle('open')">
+      <span class="insight-icon">🦁</span>
+      <span class="insight-title">كيف تُدمّر الخوف وتُقدِم — من القرآن</span>
+      <span class="insight-arrow">▶</span>
+    </div>
+    <div class="insight-body" id="insight-body-deen">
+      <div class="insight-point">
+        <div class="insight-point-t">١. الخوف من الله وحده يُذهب الخوف من سواه</div>
+        <div class="insight-ayah">﴿فَلَا تَخَافُوهُمْ وَخَافُونِ إِن كُنتُم مُّؤْمِنِينَ﴾</div>
+        <div class="insight-note">من امتلأ قلبه بخشية الله، خلا من خشية العباد.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٢. التوكل يكفيك</div>
+        <div class="insight-ayah">﴿وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ﴾</div>
+        <div class="insight-note">من جعل الله حسبه، كفاه كل ما أهمّه.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٣. كلمة المؤمنين عند الشدة</div>
+        <div class="insight-ayah">﴿الَّذِينَ قَالَ لَهُمُ النَّاسُ إِنَّ النَّاسَ قَدْ جَمَعُوا لَكُمْ فَاخْشَوْهُمْ فَزَادَهُمْ إِيمَانًا وَقَالُوا حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ﴾</div>
+        <div class="insight-note">فتحوّل الخوف نفسه إلى وقودٍ للإيمان.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٤. المعيّة الإلهية تُسكِت الرعب</div>
+        <div class="insight-ayah">﴿لَا تَخَافَا ۖ إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ﴾ — لموسى وهارون أمام فرعون</div>
+        <div class="insight-ayah">﴿لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا﴾ — في الغار</div>
+        <div class="insight-note">من أيقن أن الله معه، زالت عنه الوحشة.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٥. الأجل بيد الله وحده</div>
+        <div class="insight-ayah">﴿قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا﴾</div>
+        <div class="insight-note">الجبن لا يؤخّر الموت، والإقدام لا يُعجّله — فلِمَ الخوف؟</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٦. الإقدام ثمرة اليقين</div>
+        <div class="insight-note">الشجاعة ليست غياب الخوف، بل تقديم طاعة الله ومراده على وساوس النفس. كلما قوي يقينك بالله، قوي إقدامك.</div>
+      </div>
     </div>
   </div>
 
@@ -777,6 +941,46 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
       </div>
     </div>
   </div>
+  <div class="insight-card">
+    <div class="insight-hdr" onclick="document.getElementById('insight-body-badani').classList.toggle('open');this.querySelector('.insight-arrow').classList.toggle('open')">
+      <span class="insight-icon">🦁</span>
+      <span class="insight-title">كيف تُدمّر الخوف وتُقدِم — من القرآن</span>
+      <span class="insight-arrow">▶</span>
+    </div>
+    <div class="insight-body" id="insight-body-badani">
+      <div class="insight-point">
+        <div class="insight-point-t">١. الخوف من الله وحده يُذهب الخوف من سواه</div>
+        <div class="insight-ayah">﴿فَلَا تَخَافُوهُمْ وَخَافُونِ إِن كُنتُم مُّؤْمِنِينَ﴾</div>
+        <div class="insight-note">من امتلأ قلبه بخشية الله، خلا من خشية العباد.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٢. التوكل يكفيك</div>
+        <div class="insight-ayah">﴿وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ﴾</div>
+        <div class="insight-note">من جعل الله حسبه، كفاه كل ما أهمّه.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٣. كلمة المؤمنين عند الشدة</div>
+        <div class="insight-ayah">﴿الَّذِينَ قَالَ لَهُمُ النَّاسُ إِنَّ النَّاسَ قَدْ جَمَعُوا لَكُمْ فَاخْشَوْهُمْ فَزَادَهُمْ إِيمَانًا وَقَالُوا حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ﴾</div>
+        <div class="insight-note">فتحوّل الخوف نفسه إلى وقودٍ للإيمان.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٤. المعيّة الإلهية تُسكِت الرعب</div>
+        <div class="insight-ayah">﴿لَا تَخَافَا ۖ إِنَّنِي مَعَكُمَا أَسْمَعُ وَأَرَىٰ﴾ — لموسى وهارون أمام فرعون</div>
+        <div class="insight-ayah">﴿لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا﴾ — في الغار</div>
+        <div class="insight-note">من أيقن أن الله معه، زالت عنه الوحشة.</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٥. الأجل بيد الله وحده</div>
+        <div class="insight-ayah">﴿قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا﴾</div>
+        <div class="insight-note">الجبن لا يؤخّر الموت، والإقدام لا يُعجّله — فلِمَ الخوف؟</div>
+      </div>
+      <div class="insight-point">
+        <div class="insight-point-t">٦. الإقدام ثمرة اليقين</div>
+        <div class="insight-note">الشجاعة ليست غياب الخوف، بل تقديم طاعة الله ومراده على وساوس النفس. كلما قوي يقينك بالله، قوي إقدامك.</div>
+      </div>
+    </div>
+  </div>
+
   <div class="card"><div class="card-label">الأهداف البدنية</div><div id="goals-badani"></div></div>
 </div>
 
@@ -1004,6 +1208,36 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
 </div>
 
 <button id="transfer-btn" onclick="openCP()" title="نقل البيانات">⇄ نقل</button>
+<!-- WEEKLY OVERLAY -->
+<div id="weekly-overlay">
+  <div id="weekly-box">
+    <div id="wk-top"></div>
+    <div id="weekly-list"></div>
+    <div id="weekly-form" class="inline-form">
+      <div class="form-row">
+        <input class="fi" id="new-wk-title" placeholder="العنوان...">
+        <select class="fi" id="new-wk-type">
+          <option value="watch">شاهدت</option>
+          <option value="read">قرأت</option>
+          <option value="do">نفّذت</option>
+          <option value="learn">تعلّمت</option>
+          <option value="done2">أنجزت</option>
+        </select>
+      </div>
+      <textarea class="fi" id="new-wk-content" rows="3" placeholder="تفاصيل وملاحظات (اختياري)..."></textarea>
+      <div class="form-row" style="margin-top:8px">
+        <input class="fi" id="new-wk-url" placeholder="رابط (اختياري)...">
+        <input class="fi" id="new-wk-date" type="date" style="max-width:160px">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="fi-save" onclick="addWeekly()">إضافة</button>
+        <button class="fi-cancel" onclick="closeForm('weekly-form')">إلغاء</button>
+      </div>
+    </div>
+    <button class="add-btn green" id="wk-add-btn" onclick="openForm('weekly-form')" style="display:none">+ إضافة إنجاز أو نشاط</button>
+  </div>
+</div>
+
 <button id="mode-btn" onclick="toggleMode()">
   <span id="mode-icon">✏</span>
   <span id="mode-label">تعديل</span>
@@ -1056,13 +1290,16 @@ const STATIC_GOALS = {
 const LS_DEFS = {
   bw_deen_goals: [{id:'dn1',text:'حفظ ١٥ جزءاً من القرآن الكريم',period:'هدف رئيسي',done:false},{id:'dn2',text:'الورد اليومي من الاهتداء بالقرآن وتدبره',period:'يومي',done:false},{id:'dn3',text:'محاسبة النفس يومياً — الجلسة النفسية',period:'يومي',done:false},{id:'dn4',text:'الانقطاع للعبادة',period:'دوري',done:false},{id:'dn5',text:'التوبة النصوح والاستمرار فيها',period:'مستمر',done:false},
   {id:'dn6',text:'كفارة الأيمان',period:'واجب',done:false},
-  {id:'dn7',text:'الانتهاء من العادة السرية نهائياً والتوبة منها',period:'أولوية قصوى',done:false}],
+  {id:'dn7',text:'الانتهاء من العادة السرية نهائياً والتوبة منها',period:'أولوية قصوى',done:false},
+  {id:'dn8',text:'الوفاء بالنذور',period:'واجب',done:false},
+  {id:'dn9',text:'الاهتمام بالآخرة والأعمال التي ثوابها عظيم — وإن الحسنات يُذهبن السيئات',period:'مستمر',done:false},
+  {id:'dn10',text:'التوبة من الذنوب السابقة والطهارة منها ومن خواطرها: التوبة من الكفر والنفاق، والقول على الله بغير علم، والركون إلى الباطل وأهله، والرياء، والكبر، ومعارضة الدين بالعقل والالتفات إلى الظنون والشبهات. والتوبة من الزنا والتفكير فيه وخواطره وإعلامه. والتوبة من إرادة الخيانة والخسة. والتوبة أولاً من التكبر على الوالدين وعقوقهما',period:'أولوية قصوى',done:false}],
   bw_done_mihani:{}, bw_done_badani:{}, bw_done_asri:{},
   bw_ilmi:{domains:[]},
   bw_quotes:[],
   bw_media:[{id:'v1',title:'فيديو الشيخ أحمد السيد',url:'https://www.youtube.com/watch?v=Vakbo2Fvo8M'}],
   bw_sirah:[],
-  bw_aspir:[{id:'asp1',text:'فهم القرآن الكريم كما فهمه العرب الأوائل'},{id:'asp2',text:'حل الإشكالات والتساؤلات الدينية'},{id:'asp3',text:'أن يراه أهله قوياً يحميهم ويعتزون به'},{id:'asp4',text:'أن يكون ابنه يوماً ما فخوراً بأبيه'}],
+  bw_aspir:[{id:'asp1',text:'فهم القرآن الكريم كما فهمه العرب الأوائل'},{id:'asp2',text:'حل الإشكالات والتساؤلات الدينية'},{id:'asp3',text:'أن أكون شخصاً مسؤولاً وقوياً يقوى على إعانة أسرته وحمايتهم'},{id:'asp4',text:'أن يكون ابنه يوماً ما فخوراً بأبيه'}],
   bw_books:[{id:'bk1',title:'الفوائد',author:'ابن القيم',cat:'إسلامي',status:'جارٍ',url:''},{id:'bk2',title:'مدارج السالكين',author:'ابن القيم',cat:'تزكية',status:'سأقرأه',url:''},{id:'bk3',title:'الوابل الصيب',author:'ابن القيم',cat:'تزكية',status:'سأقرأه',url:''},{id:'bk4',title:'رياض الصالحين',author:'النووي',cat:'إسلامي',status:'سأقرأه',url:''},{id:'bk5',title:'العادات الذرية',author:'James Clear',cat:'تطوير ذات',status:'سأقرأه',url:''},{id:'bk6',title:'الإنسان يبحث عن المعنى',author:'Viktor Frankl',cat:'علم نفس',status:'سأقرأه',url:''},{id:'bk7',title:'أبي الغني أبي الفقير',author:'Kiyosaki',cat:'مالي',status:'سأقرأه',url:''}],
   bw_mq:{text:'ليس في الدنيا نعيم يشبه نعيم الآخرة إلا نعيم الإيمان\nلتمرَّ على القلب أوقات يرقص فيها طرباً — وليس في الدنيا نعيم يشبه نعيم الآخرة إلا نعيم الإيمان والمعرفة',source:'أحد الصالحين'},
 };
@@ -1284,6 +1521,83 @@ window.addEventListener('DOMContentLoaded',()=>{
     localStorage.setItem('bw_mtasks', JSON.stringify(DEFAULT_MTASKS));
   }
 
+
+  // Migration: weekly
+  try {
+    const rawWk = localStorage.getItem('bw_weekly');
+    if(!rawWk || rawWk === '[object Object]') {
+      localStorage.setItem('bw_weekly', JSON.stringify(DEFAULT_WEEKLY));
+      weeklyData = JSON.parse(JSON.stringify(DEFAULT_WEEKLY));
+    } else {
+      const ex = JSON.parse(rawWk);
+      if(Array.isArray(ex)){
+        let changed2=false;
+        if(!ex.find(w=>w.id==='wk1')){ ex.push(DEFAULT_WEEKLY[0]); changed2=true; }
+        if(!ex.find(w=>w.id==='wk2')){ ex.push(DEFAULT_WEEKLY[1]); changed2=true; }
+        if(changed2){
+          localStorage.setItem('bw_weekly', JSON.stringify(ex));
+          weeklyData = ex;
+        }
+      }
+    }
+  } catch(e) {
+    localStorage.setItem('bw_weekly', JSON.stringify(DEFAULT_WEEKLY));
+  }
+
+
+  // Migration: default quote
+  try {
+    const rawQ = localStorage.getItem('bw_quotes');
+    let qArr = [];
+    if(rawQ && rawQ !== '[object Object]') { try { qArr = JSON.parse(rawQ); } catch(e){} }
+    if(Array.isArray(qArr) && !qArr.find(q=>q.id==='dq1')){
+      qArr.unshift({id:'dq1', text:"\u0642\u0627\u0644 \u0639\u0644\u064a\u0647 \u0627\u0644\u0635\u0644\u0627\u0629 \u0648\u0627\u0644\u0633\u0644\u0627\u0645: \u00ab\u0645\u0646 \u0623\u064f\u0648\u062a\u064a \u0627\u0644\u0642\u0631\u0622\u0646 \u0641\u0631\u0623\u0649 \u0623\u0646 \u0623\u062d\u062f\u0627\u064b \u0623\u064f\u0648\u062a\u064a \u062e\u064a\u0631\u0627\u064b \u0645\u0646\u0647 \u0641\u0642\u062f \u062d\u0642\u064e\u0651\u0631 \u0645\u0627 \u0639\u0638\u064e\u0651\u0645 \u0627\u0644\u0644\u0647 \u062a\u0639\u0627\u0644\u0649\u00bb\n\n\u0648\u0642\u0627\u0644 \u0641\u062a\u062d \u0627\u0644\u0645\u0648\u0635\u0644\u064a \u0631\u062d\u0645\u0647 \u0627\u0644\u0644\u0647: \u0623\u0644\u064a\u0633 \u0627\u0644\u0645\u0631\u064a\u0636 \u0625\u0630\u0627 \u0645\u064f\u0646\u0639 \u0627\u0644\u0637\u0639\u0627\u0645 \u0648\u0627\u0644\u0634\u0631\u0627\u0628 \u0648\u0627\u0644\u062f\u0648\u0627\u0621 \u064a\u0645\u0648\u062a\u061f \u0642\u0627\u0644\u0648\u0627: \u0628\u0644\u0649. \u0642\u0627\u0644: \u0643\u0630\u0644\u0643 \u0627\u0644\u0642\u0644\u0628 \u0625\u0630\u0627 \u0645\u064f\u0646\u0639 \u0639\u0646\u0647 \u0627\u0644\u062d\u0643\u0645\u0629 \u0648\u0627\u0644\u0639\u0644\u0645 \u062b\u0644\u0627\u062b\u0629 \u0623\u064a\u0627\u0645 \u064a\u0645\u0648\u062a.\n\n\u0648\u0644\u0642\u062f \u0635\u062f\u0642\u060c \u0641\u0625\u0646 \u063a\u0630\u0627\u0621 \u0627\u0644\u0642\u0644\u0628 \u0627\u0644\u0639\u0644\u0645 \u0648\u0627\u0644\u062d\u0643\u0645\u0629 \u0648\u0628\u0647\u0645\u0627 \u062d\u064a\u0627\u062a\u0647\u060c \u0643\u0645\u0627 \u0623\u0646 \u063a\u0630\u0627\u0621 \u0627\u0644\u062c\u0633\u062f \u0627\u0644\u0637\u0639\u0627\u0645. \u0648\u0645\u0646 \u0641\u0642\u062f \u0627\u0644\u0639\u0644\u0645 \u0641\u0642\u0644\u0628\u0647 \u0645\u0631\u064a\u0636 \u0648\u0645\u0648\u062a\u0647 \u0644\u0627\u0632\u0645\u060c \u0648\u0644\u0643\u0646\u0647 \u0644\u0627 \u064a\u0634\u0639\u0631 \u0628\u0647 \u0625\u0630 \u062d\u0628\u064f\u0651 \u0627\u0644\u062f\u0646\u064a\u0627", src:'حديث شريف وأثر فتح الموصلي'});
+      localStorage.setItem('bw_quotes', JSON.stringify(qArr));
+      quotesData = qArr;
+    }
+  } catch(e){}
+
+  // Migration: quote dq2
+  try {
+    const rawQ2 = localStorage.getItem('bw_quotes');
+    let qArr2 = [];
+    if(rawQ2 && rawQ2 !== '[object Object]') { try { qArr2 = JSON.parse(rawQ2); } catch(e){} }
+    if(Array.isArray(qArr2) && !qArr2.find(q=>q.id==='dq2')){
+      qArr2.push({id:'dq2', text:"\u0642\u0627\u0644 \u0627\u0644\u0632\u0628\u064a\u0631 \u0628\u0646 \u0623\u0628\u064a \u0628\u0643\u0631: \u0643\u062a\u0628 \u0625\u0644\u064a\u0651 \u0623\u0628\u064a \u0628\u0627\u0644\u0639\u0631\u0627\u0642: \u0639\u0644\u064a\u0643 \u0628\u0627\u0644\u0639\u0644\u0645 \u0641\u0625\u0646\u0643 \u0625\u0646 \u0627\u0641\u062a\u0642\u0631\u062a \u0643\u0627\u0646 \u0644\u0643 \u0645\u0627\u0644\u0627\u064b\u060c \u0648\u0625\u0646 \u0627\u0633\u062a\u063a\u0646\u064a\u062a \u0643\u0627\u0646 \u0644\u0643 \u062c\u0645\u0627\u0644\u0627\u064b.\n\n\u0648\u062d\u064f\u0643\u064a \u0630\u0644\u0643 \u0641\u064a \u0648\u0635\u0627\u064a\u0627 \u0644\u0642\u0645\u0627\u0646 \u0644\u0627\u0628\u0646\u0647 \u0642\u0627\u0644: \u064a\u0627 \u0628\u064f\u0646\u064a\u0651 \u062c\u0627\u0644\u0650\u0633 \u0627\u0644\u0639\u0644\u0645\u0627\u0621 \u0648\u0632\u0627\u062d\u0650\u0645\u0647\u0645 \u0628\u0631\u0643\u0628\u062a\u064a\u0643\u060c \u0641\u0625\u0646 \u0627\u0644\u0644\u0647 \u0633\u0628\u062d\u0627\u0646\u0647 \u064a\u064f\u062d\u064a\u064a \u0627\u0644\u0642\u0644\u0648\u0628 \u0628\u0646\u0648\u0631 \u0627\u0644\u062d\u0643\u0645\u0629 \u0643\u0645\u0627 \u064a\u064f\u062d\u064a\u064a \u0627\u0644\u0623\u0631\u0636 \u0628\u0648\u0627\u0628\u0644 \u0627\u0644\u0633\u0645\u0627\u0621.", src:'وصية أبي بكر ولقمان'});
+      localStorage.setItem('bw_quotes', JSON.stringify(qArr2));
+      quotesData = qArr2;
+    }
+  } catch(e){}
+
+  
+  // Migration: update asp3 text
+  try {
+    const rawAsp = localStorage.getItem('bw_aspir');
+    if(rawAsp && rawAsp !== '[object Object]'){
+      const aspArr = JSON.parse(rawAsp);
+      if(Array.isArray(aspArr)){
+        const a3 = aspArr.find(a=>a.id==='asp3');
+        if(a3 && a3.text.indexOf('يراه أهله') > -1){
+          a3.text = 'أن أكون شخصاً مسؤولاً وقوياً يقوى على إعانة أسرته وحمايتهم';
+          localStorage.setItem('bw_aspir', JSON.stringify(aspArr));
+          aspirData = aspArr;
+        }
+      }
+    }
+  } catch(e){}
+
+
+  // Migration: wajib
+  try {
+    const rawWj = localStorage.getItem('bw_wajib');
+    if(!rawWj || rawWj === '[object Object]'){
+      localStorage.setItem('bw_wajib', JSON.stringify(DEFAULT_WAJIB));
+      wajibData = JSON.parse(JSON.stringify(DEFAULT_WAJIB));
+    }
+  } catch(e){
+    localStorage.setItem('bw_wajib', JSON.stringify(DEFAULT_WAJIB));
+  }
+
   // Migration: articles (safe)
   try {
     const rawArt = localStorage.getItem('bw_articles');
@@ -1325,6 +1639,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   renderStaticGoals('asri','goals-asri',doneAs,'bw_done_asri','blue-fill');
   renderIlmiContent();
   renderFawait();
+  renderWajib();
+  renderWeekly();
   renderArticles();
   renderQuotes();
   renderMedia();
@@ -1523,7 +1839,7 @@ const ALL_KEYS = ['bw_identity','bw_mq','bw_deen_goals','bw_ilmi','bw_quotes','b
   'bw_done_mihani','bw_done_badani','bw_done_asri','bw_tab','bw_mode',
   'bw_fault1','bw_fault2','bw_fault3','bw_letter',
   'bw_now-ilmi','bw_tgt-ilmi','bw_job-co','bw_job-fl',
-  'bw_now-mih','bw_tgt-mih','bw_now-bd','bw_tgt-bd','bw_now-as','bw_tgt-as','bw_why','bw_ilmi_v2','bw_fawait','bw_ilmi_tab','bw_articles','bw_mtasks'];
+  'bw_now-mih','bw_tgt-mih','bw_now-bd','bw_tgt-bd','bw_now-as','bw_tgt-as','bw_why','bw_ilmi_v2','bw_fawait','bw_ilmi_tab','bw_articles','bw_mtasks','bw_weekly','bw_wk_start','bw_wajib'];
 
 
 // ═══════════ GITHUB GIST SYNC ═══════════
@@ -1725,6 +2041,7 @@ function pasteImport(){
   }
 }
 document.getElementById('cp-overlay').addEventListener('click',function(e){ if(e.target===this) closeCPOverlay(); });
+document.getElementById('weekly-overlay')?.addEventListener('click',function(e){ if(e.target===this) closeWeekly(); });
 
 
 // ═══════════ ILMI DATA ═══════════
@@ -2131,6 +2448,8 @@ function addArticle(){
   document.getElementById('new-art-content').value='';
   if(document.getElementById('new-art-tags')) document.getElementById('new-art-tags').value='';
   closeForm('article-form');
+  renderWajib();
+  renderWeekly();
   renderArticles();
 }
 
@@ -2240,6 +2559,259 @@ function renderMTasks(){
     html += '<div class="chk ' + (t.done?'on':'') + '">' + (t.done?'✓':'') + '</div>';
     html += '<div style="flex:1"><div class="goal-txt">' + t.text + '</div></div>';
     html += '<button class="g-del" onclick="event.stopPropagation();delMTask(\'' + t.id + '\')">✕</button>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+
+
+
+function openWeekly(){ document.getElementById('weekly-overlay').classList.add('open'); wkView='list'; wkSelectedKey=null; renderWeekly(); }
+function closeWeekly(){ document.getElementById('weekly-overlay').classList.remove('open'); }
+
+// ═══════════ WEEKLY ═══════════
+const DEFAULT_WEEKLY = [
+  {
+    id:'wk1',
+    title:"\u0644\u0645\u0627\u0630\u0627 \u062a\u0646\u0647\u0627\u0631 \u0627\u0644\u0623\u0645\u0645\u061f \u2014 \u0645. \u0623\u064a\u0645\u0646 \u0639\u0628\u062f \u0627\u0644\u0631\u062d\u064a\u0645",
+    type:'watch',
+    content:"\u0631\u0624\u064a\u0629 \u062a\u062d\u0644\u064a\u0644\u064a\u0629 \u0646\u0642\u062f\u064a\u0629 \u062d\u0648\u0644 \u0633\u0624\u0627\u0644 \u062c\u0648\u0647\u0631\u064a: \u0644\u0645\u0627\u0630\u0627 \u062a\u0646\u0647\u0627\u0631 \u0627\u0644\u0623\u0645\u0645\u061f\n\n\u25aa \u0627\u0644\u0645\u0631\u0627\u062c\u0639 \u0627\u0644\u0641\u0643\u0631\u064a\u0629:\n\u2022 \"\u0627\u0644\u0627\u0646\u0647\u064a\u0627\u0631\" (Collapse) \u2014 \u062c\u0627\u0631\u062f \u062f\u0627\u064a\u0645\u0648\u0646\u062f: \u0627\u0644\u0645\u062c\u062a\u0645\u0639\u0627\u062a \u0627\u0644\u0645\u0639\u0642\u062f\u0629 \u062a\u062a\u062e\u0630 \u0642\u0631\u0627\u0631\u0627\u062a \u0643\u0627\u0631\u062b\u064a\u0629 \u062a\u0624\u062f\u064a \u0625\u0644\u0649 \u0646\u0647\u0627\u064a\u062a\u0647\u0627.\n\u2022 \"\u0627\u0646\u0647\u064a\u0627\u0631 \u0627\u0644\u0645\u062c\u062a\u0645\u0639\u0627\u062a \u0627\u0644\u0645\u0639\u0642\u062f\u0629\" \u2014 \u062c\u0648\u0632\u064a\u0641 \u062a\u064a\u0646\u062a\u0631: \u0627\u0644\u0638\u0627\u0647\u0631\u0629 \u0643\u0645\u0633\u0627\u0631 \u062a\u0627\u0631\u064a\u062e\u064a \u0645\u062a\u0643\u0631\u0631 \u0644\u0644\u062d\u0636\u0627\u0631\u0627\u062a \u0627\u0644\u0643\u0628\u0631\u0649.\n\u2022 \"\u0644\u0645\u0627\u0630\u0627 \u062a\u0641\u0634\u0644 \u0627\u0644\u0623\u0645\u0645\" \u2014 \u0623\u0633\u064a\u0645\u0648\u063a\u0644\u0648 \u0648\u0631\u0648\u0628\u0646\u0633\u0648\u0646: \u0646\u062c\u0627\u062d \u0623\u0648 \u0641\u0634\u0644 \u0627\u0644\u062f\u0648\u0644 \u0645\u0631\u062a\u0628\u0637 \u0628\u062c\u0648\u062f\u0629 \u0645\u0624\u0633\u0633\u0627\u062a\u0647\u0627 \u0648\u0641\u0644\u0633\u0641\u0629 \u062d\u0643\u0645\u0647\u0627.\n\n\u25aa \u062a\u0641\u0646\u064a\u062f \u0627\u0644\u0623\u0633\u0628\u0627\u0628 \u0627\u0644\u062a\u0642\u0644\u064a\u062f\u064a\u0629 \u0644\u0644\u0641\u0634\u0644:\n\u2022 \u0627\u0644\u062e\u0644\u0644 \u0627\u0644\u062c\u063a\u0631\u0627\u0641\u064a: \u0634\u062d \u0627\u0644\u0645\u0648\u0627\u0631\u062f \u0644\u064a\u0633 \u0642\u062f\u0631\u0627\u064b \u0645\u062d\u062a\u0648\u0645\u0627\u064b (\u0627\u0644\u064a\u0627\u0628\u0627\u0646 \u0646\u0647\u0636\u062a \u0631\u063a\u0645 \u0641\u0642\u0631 \u0645\u0648\u0627\u0631\u062f\u0647\u0627).\n\u2022 \u0627\u0644\u0639\u0631\u0642 \u0623\u0648 \u0627\u0644\u062b\u0642\u0627\u0641\u0629: \u0645\u0631\u0641\u0648\u0636\u0629 \u0644\u0623\u0646 \u0627\u0644\u062d\u0636\u0627\u0631\u0627\u062a \u062a\u062a\u063a\u064a\u0631 \u062c\u0630\u0631\u064a\u0627\u064b \u0628\u0646\u0627\u0621\u064b \u0639\u0644\u0649 \u0627\u0644\u0646\u0638\u0627\u0645 \u0627\u0644\u0645\u0624\u0633\u0633\u064a \u0644\u0627 \u0633\u0645\u0627\u062a \u0639\u0631\u0642\u064a\u0629 \u062b\u0627\u0628\u062a\u0629.\n\u2022 \u0627\u0644\u062c\u0647\u0644 \u0628\u0627\u0644\u062d\u0644\u0648\u0644: \u0627\u0644\u062d\u0644\u0648\u0644 \u0645\u0639\u0631\u0648\u0641\u0629 \u0648\u0645\u062a\u0627\u062d\u0629\u060c \u0648\u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0641\u064a \u063a\u064a\u0627\u0628 \u0627\u0644\u0625\u0631\u0627\u062f\u0629 \u0623\u0648 \u0641\u0633\u0627\u062f \u0641\u0644\u0633\u0641\u0629 \u0627\u0644\u062d\u0643\u0645.\n\n\u25aa \u0627\u0644\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u064a\u0627\u0628\u0627\u0646\u064a: \u062a\u062d\u0648\u0644 \u0627\u0644\u064a\u0627\u0628\u0627\u0646 \u0645\u0646 \u0628\u0644\u062f \u0645\u0648\u0635\u0648\u0641 \u0628\u0627\u0644\u0628\u062f\u0627\u0626\u064a\u0629 \u0625\u0644\u0649 \u0642\u0648\u0629 \u0639\u0638\u0645\u0649 \u0628\u0639\u062f \u0639\u0635\u0631 \u0627\u0644\u0645\u064a\u062c\u064a\u060c \u0645\u0642\u0627\u0631\u0646\u0629 \u0628\u0627\u0644\u062a\u062c\u0631\u0628\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629 \u0641\u064a \u0639\u0647\u062f \u0645\u062d\u0645\u062f \u0639\u0644\u064a \u0627\u0644\u062a\u064a \u0627\u062e\u062a\u0644\u0641\u062a \u0646\u062a\u0627\u0626\u062c\u0647\u0627.\n\n\u25aa \u0623\u0633\u0628\u0627\u0628 \u0627\u0644\u0627\u0646\u0647\u064a\u0627\u0631 \u0627\u0644\u0639\u0645\u0644\u064a\u0629:\n\u2022 \u063a\u064a\u0627\u0628 \u0627\u0644\u062a\u0648\u0642\u0639: \u062a\u062c\u0627\u0647\u0644 \u0627\u0644\u0645\u0634\u0643\u0644\u0627\u062a \u0627\u0644\u0645\u062d\u062a\u0645\u0644\u0629 \u0648\u0639\u062f\u0645 \u0627\u0644\u0627\u0633\u062a\u0639\u062f\u0627\u062f \u0644\u0647\u0627.\n\u2022 \u0627\u0644\u0627\u0646\u062a\u062d\u0627\u0631 \u0627\u0644\u0645\u0624\u0633\u0633\u064a: \u0642\u0631\u0627\u0631\u0627\u062a \u062a\u062e\u0637\u064a\u0637\u064a\u0629 \u0643\u0627\u0631\u062b\u064a\u0629.\n\u2022 \u0627\u0644\u062a\u063a\u064a\u0631\u0627\u062a \u0627\u0644\u0628\u0637\u064a\u0626\u0629 (\u0627\u0644\u0623\u062e\u0637\u0631): \u0627\u0644\u062a\u062f\u0647\u0648\u0631 \u0628\u0645\u0639\u062f\u0644 \u063a\u064a\u0631 \u0645\u0644\u062d\u0648\u0638 \u064a\u0648\u0645\u064a\u0627\u064b\u060c \u0644\u0627 \u064a\u0634\u0639\u0631 \u0628\u0647 \u0625\u0644\u0627 \u0627\u0644\u062e\u0628\u064a\u0631\u060c \u0641\u064a\u0623\u062a\u064a \u0631\u062f \u0627\u0644\u0641\u0639\u0644 \u0645\u062a\u0623\u062e\u0631\u0627\u064b \u062c\u062f\u0627\u064b.",
+    url:'https://www.youtube.com/watch?v=maaveUj2sG0',
+    date:'2026-06-03',
+    open:false
+  },
+  {id:'wk2',title:"\u064a\u0642\u0638\u0629 \u0627\u0644\u0639\u0642\u0644 \u2014 \u0623.\u062f. \u0645\u062d\u0645\u062f \u0645\u062d\u0645\u062f \u0623\u0628\u0648 \u0645\u0648\u0633\u0649",type:'watch',content:"\u064a\u0642\u062f\u0645 \u0627\u0644\u0623\u0633\u062a\u0627\u0630 \u0627\u0644\u062f\u0643\u062a\u0648\u0631 \u0645\u062d\u0645\u062f \u0645\u062d\u0645\u062f \u0623\u0628\u0648 \u0645\u0648\u0633\u0649 \u0631\u0624\u064a\u0629 \u0639\u0645\u064a\u0642\u0629 \u062d\u0648\u0644 \u0623\u0647\u0645\u064a\u0629 \u0625\u064a\u0642\u0627\u0638 \u0627\u0644\u0639\u0642\u0644 \u0648\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0628\u0635\u064a\u0631\u0629 \u0643\u062e\u0637\u0648\u0629 \u0623\u0633\u0627\u0633\u064a\u0629 \u0641\u064a \u0639\u0645\u0644\u064a\u0629 \u0627\u0644\u062a\u0639\u0644\u0645 \u0648\u0627\u0644\u0628\u062d\u062b.\n\n\u25aa \u0625\u0639\u062f\u0627\u062f \u0627\u0644\u0639\u0642\u0644 \u0642\u0628\u0644 \u0627\u0644\u0642\u0631\u0627\u0621\u0629: \u0627\u0644\u0642\u0631\u0627\u0621\u0629 \u0628\u063a\u0641\u0644\u0629 \u062a\u0642\u062a\u0644 \u0627\u0644\u0645\u0627\u062f\u0629 \u0627\u0644\u0639\u0644\u0645\u064a\u0629 \u2014 \u064a\u062c\u0628 \u0627\u0633\u062a\u0646\u0641\u0627\u0631 \u0627\u0644\u0637\u0627\u0642\u0629 \u0627\u0644\u0639\u0642\u0644\u064a\u0629 \u0648\u0634\u062d\u0630 \u0627\u0644\u0628\u0635\u064a\u0631\u0629 \u0642\u0628\u0644 \u0623\u064a \u0639\u0645\u0644 \u0645\u0639\u0631\u0641\u064a.\n\n\u25aa \u0646\u0642\u062f \u0623\u0633\u0644\u0648\u0628 \u0627\u0644\u062a\u0644\u0642\u064a\u0646: \u0623\u0633\u0627\u0644\u064a\u0628 \u0627\u0644\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u062a\u064a \u062a\u062c\u0639\u0644 \u0627\u0644\u0637\u0644\u0627\u0628 \u0641\u064a \u062d\u0627\u0644\u0629 \u062e\u0645\u0648\u0644 \u062a\u0634\u0628\u0647 \u0645\u0646\u0647\u062c\u064a\u0629 \u0627\u0644\u0646\u0638\u0645 \u0627\u0644\u0645\u0633\u062a\u0628\u062f\u0629 \u2014 \u0627\u0644\u0639\u0642\u0644 \u0627\u0644\u0645\u0633\u062a\u064a\u0642\u0638 \u0644\u0627 \u064a\u064f\u062e\u062f\u0639 \u0648\u0644\u0627 \u064a\u064f\u0638\u0644\u0645.\n\n\u25aa \u0627\u0644\u0639\u0642\u0644 \u0643\u0645\u062d\u0631\u0643 \u0644\u0644\u062d\u0636\u0627\u0631\u0629: \u0627\u0644\u062a\u062e\u0644\u0641 \u0647\u0648 \u063a\u0641\u0644\u0629 \u0627\u0644\u0639\u0642\u0644\u060c \u0648\u0627\u0644\u062a\u0642\u062f\u0645 \u0648\u0627\u0644\u0627\u0628\u062a\u0643\u0627\u0631 \u0646\u062a\u0627\u062c \u064a\u0642\u0638\u062a\u0647. \u0627\u0644\u0645\u0647\u0645\u0629 \u0627\u0644\u0623\u0633\u0627\u0633\u064a\u0629 \u0644\u0644\u062c\u0627\u0645\u0639\u0627\u062a \u064a\u062c\u0628 \u0623\u0646 \u062a\u0643\u0648\u0646 \u0625\u064a\u0642\u0627\u0638 \u0627\u0644\u0639\u0642\u0648\u0644 \u0644\u0627 \u0645\u062c\u0631\u062f \u0646\u0642\u0644 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a.\n\n\u25aa \u0623\u062f\u0628 \u0627\u0644\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u062a\u0631\u0627\u062b: \u0625\u0630\u0627 \u0648\u062c\u062f \u0627\u0644\u0642\u0627\u0631\u0626 \u0643\u0644\u0627\u0645\u0627\u064b \u0644\u0627 \u064a\u0648\u0627\u0641\u0642\u0647 \u0645\u0646\u0633\u0648\u0628\u0627\u064b \u0644\u0639\u0627\u0644\u0645 \u0643\u0628\u064a\u0631\u060c \u0641\u0639\u0644\u064a\u0647 \u0623\u0646 \u064a\u062a\u0631\u062f\u062f \u0641\u064a \u0631\u0641\u0636\u0647 \u0648\u064a\u0628\u062d\u062b \u0644\u0647 \u0639\u0646 \u0648\u062c\u0647 \u0645\u0642\u0628\u0648\u0644.\n\n\u25aa \u0642\u064a\u0645\u0629 \u0627\u0644\u0639\u0637\u0627\u0621 \u0627\u0644\u0645\u0639\u0631\u0641\u064a: \u0627\u0644\u0639\u0644\u0645\u0627\u0621 \u0627\u0644\u0630\u064a\u0646 \u064a\u062a\u062f\u0641\u0642\u0648\u0646 \u0641\u064a \u0627\u0644\u0645\u0639\u0646\u0649 \u064a\u0639\u0637\u0648\u0646 \u0639\u0646 \u0648\u0641\u0631\u0629 \u2014 \u0646\u062a\u064a\u062c\u0629 \u0635\u0628\u0631\u0647\u0645 \u0627\u0644\u0637\u0648\u064a\u0644 \u0639\u0644\u0649 \u062a\u0631\u0628\u064a\u0629 \u0639\u0642\u0648\u0644\u0647\u0645.\n\n\u0627\u0644\u062e\u0644\u0627\u0635\u0629: \u0627\u0644\u0639\u0642\u0644 \u0647\u0648 \u0627\u0644\u0623\u062f\u0627\u0629 \u0627\u0644\u0641\u0627\u0639\u0644\u0629 \u0627\u0644\u062a\u064a \u062a\u0635\u0646\u0639 \u0627\u0644\u062d\u0636\u0627\u0631\u0629.",url:'https://www.youtube.com/watch?v=IbL8NpLBoZ4&t=215s',date:'2026-06-02',open:false}
+];
+
+let weeklyData = (() => {
+  try {
+    const raw = localStorage.getItem('bw_weekly');
+    if(!raw || raw === '[object Object]') throw new Error();
+    const p = JSON.parse(raw);
+    if(!Array.isArray(p)) throw new Error();
+    return p;
+  } catch { return JSON.parse(JSON.stringify(DEFAULT_WEEKLY)); }
+})();
+
+function saveWeekly(){ localStorage.setItem('bw_weekly', JSON.stringify(weeklyData)); }
+
+const WK_LABELS = {read:'قرأت',watch:'شاهدت',do:'نفّذت',learn:'تعلّمت',done2:'أنجزت'};
+
+function toggleWeekly(id){
+  const w = weeklyData.find(w=>w.id===id);
+  if(w){ w.open=!w.open; saveWeekly(); renderWeekly(); }
+}
+
+function addWeekly(){
+  const title = document.getElementById('new-wk-title')?.value.trim();
+  if(!title) return;
+  const type = document.getElementById('new-wk-type')?.value||'do';
+  const content = document.getElementById('new-wk-content')?.value.trim()||'';
+  const url = document.getElementById('new-wk-url')?.value.trim()||'';
+  let date = document.getElementById('new-wk-date')?.value||'';
+  if(!date) date = new Date().toISOString().slice(0,10);
+  weeklyData.unshift({id:Date.now()+'', title, type, content, url, date, open:true});
+  saveWeekly();
+  ['new-wk-title','new-wk-content','new-wk-url','new-wk-date'].forEach(id=>{ const e=document.getElementById(id); if(e) e.value=''; });
+  closeForm('weekly-form');
+  renderWajib();
+  renderWeekly();
+}
+
+function delWeekly(id){
+  weeklyData = weeklyData.filter(w=>w.id!==id);
+  saveWeekly(); renderWeekly();
+}
+
+
+// ── Weekly two-view system ──
+let wkView = 'list';        // 'list' | 'detail'
+let wkSelectedKey = null;   // week start ISO
+let wkWeeksToShow = 12;
+
+const WK_DAY_NAMES = ['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const WK_MONTHS = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+const WK_TYPE_LABELS = {read:'قرأت',watch:'شاهدت',do:'نفّذت',learn:'تعلّمت',done2:'أنجزت'};
+
+function wkWeekStart(ds){
+  const d = new Date(ds + 'T00:00:00');
+  d.setDate(d.getDate() - d.getDay()); // back to Sunday
+  d.setHours(0,0,0,0);
+  return d;
+}
+function wkFmt(d){ return d.getDate() + ' ' + WK_MONTHS[d.getMonth()]; }
+function wkKeyOf(d){ return d.toISOString().slice(0,10); }
+function wkEntriesFor(key){
+  return weeklyData.filter(function(w){
+    const ds = w.date || new Date().toISOString().slice(0,10);
+    return wkKeyOf(wkWeekStart(ds)) === key;
+  });
+}
+
+function renderWeekly(){
+  if(wkView === 'detail' && wkSelectedKey) renderWeekDetail();
+  else renderWeekList();
+}
+
+function renderWeekList(){
+  const top = document.getElementById('wk-top');
+  const list = document.getElementById('weekly-list');
+  const form = document.getElementById('weekly-form');
+  const addBtn = document.getElementById('wk-add-btn');
+  if(form) form.classList.remove('open');
+  if(addBtn) addBtn.style.display = 'none';
+  if(!top || !list) return;
+
+  top.innerHTML = '<div class="wk-top-row"><div class="wk-top-title">مراجعتي الأسبوعية</div><button class="wk-close" onclick="closeWeekly()">×</button></div>' +
+    '<div class="wk-top-sub">اختر الأسبوع — الأحد يوم المراجعة 📋</div>';
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  const curStart = wkWeekStart(wkKeyOf(today));
+
+  // Journey start: saved, or earliest entry, or current week
+  let startKey = localStorage.getItem('bw_wk_start') || '';
+  let startDate;
+  if(startKey){ startDate = wkWeekStart(startKey); }
+  else { startDate = new Date(curStart); startDate.setDate(startDate.getDate()-7); }
+  // Also pull back to earliest entry if older
+  weeklyData.forEach(function(w){
+    if(w.date){ const ws = wkWeekStart(w.date); if(ws < startDate) startDate = ws; }
+  });
+
+  // Total weeks from start to current (inclusive)
+  const msWeek = 7*24*60*60*1000;
+  let totalWeeks = Math.floor((curStart - startDate)/msWeek) + 1;
+  if(totalWeeks < 1) totalWeeks = 1;
+
+  // Build list newest-first, but number oldest = 1
+  let html = '<div class="weeks-grid">';
+  for(let i=0;i<totalWeeks;i++){
+    const ws = new Date(curStart); ws.setDate(ws.getDate() - i*7);
+    const we = new Date(ws); we.setDate(we.getDate()+6);
+    const key = wkKeyOf(ws);
+    const num = totalWeeks - i;            // oldest = 1, current = totalWeeks
+    const count = wkEntriesFor(key).length;
+    const isCurrent = (i===0);
+    html += '<div class="week-tile '+(isCurrent?'current':'')+'" onclick="openWeekDetail(\''+key+'\')">';
+    if(isCurrent) html += '<span class="week-tile-badge">الحالي</span>';
+    html += '<div class="week-tile-n">أسبوع ' + num + '</div>';
+    html += '<div class="week-tile-range">' + wkFmt(ws) + ' – ' + wkFmt(we) + '</div>';
+    html += '<div class="week-tile-count">' + (count>0 ? count+' إدخال' : 'فارغ') + '</div>';
+    html += '</div>';
+  }
+  html += '</div>';
+  html += '<button class="wk-load-more" onclick="wkSetStart()">⚙ ضبط بداية الرحلة (لإضافة أسابيع أقدم)</button>';
+  list.innerHTML = html;
+}
+
+function wkSetStart(){
+  const cur = localStorage.getItem('bw_wk_start') || new Date().toISOString().slice(0,10);
+  const v = prompt('تاريخ بداية رحلتك (سنة-شهر-يوم):', cur);
+  if(v && /^\d{4}-\d{2}-\d{2}$/.test(v)){
+    localStorage.setItem('bw_wk_start', v);
+    renderWeekList();
+  }
+}
+
+function renderWeekDetail(){
+  const top = document.getElementById('wk-top');
+  const list = document.getElementById('weekly-list');
+  const addBtn = document.getElementById('wk-add-btn');
+  if(addBtn) addBtn.style.display = 'flex';
+  if(!top || !list) return;
+
+  const ws = new Date(wkSelectedKey + 'T00:00:00');
+  const we = new Date(ws); we.setDate(we.getDate()+6);
+
+  top.innerHTML = '<div class="wk-top-row"><button class="wk-back" onclick="backToWeekList()">‹ كل الأسابيع</button><button class="wk-close" onclick="closeWeekly()">×</button></div>' +
+    '<div class="wk-top-title" style="margin-top:10px">' + wkFmt(ws) + ' – ' + wkFmt(we) + '</div>' +
+    '<div class="wk-top-sub">الأحد يوم المراجعة 📋</div>';
+
+  const items = wkEntriesFor(wkSelectedKey).sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
+  if(!items.length){
+    list.innerHTML = '<div style="font-size:12px;color:var(--text3);padding:10px 0">لا توجد إدخالات في هذا الأسبوع — أضف أول إنجاز</div>';
+    return;
+  }
+  let html = '';
+  items.forEach(function(w){
+    const lbl = WK_TYPE_LABELS[w.type]||'';
+    let dayName='', dayCls='';
+    if(w.date){ const dd=new Date(w.date+'T00:00:00'); const dn=dd.getDay(); dayName=WK_DAY_NAMES[dn]; dayCls=dn===5?'friday':dn===0?'saturday':''; }
+    html += '<div class="wk-card">';
+    html += '<div class="wk-hdr" onclick="toggleWeekly(\''+w.id+'\')">';
+    html += '<span class="wk-arrow '+(w.open?'open':'')+'">▶</span>';
+    if(dayName) html += '<span class="wk-day '+dayCls+'">'+dayName+'</span>';
+    html += '<span class="wk-type '+w.type+'">'+lbl+'</span>';
+    html += '<span class="wk-title">'+w.title+'</span>';
+    html += '<button class="skill-del" onclick="event.stopPropagation();delWeekly(\''+w.id+'\')">✕</button>';
+    html += '</div>';
+    html += '<div class="wk-body '+(w.open?'open':'')+'">';
+    if(w.content) html += '<div class="wk-content">'+w.content.replace(/\n/g,'<br>')+'</div>';
+    if(w.url) html += '<a class="wk-link" href="'+w.url+'" target="_blank">↗ فتح الرابط</a>';
+    html += '</div></div>';
+  });
+  list.innerHTML = html;
+}
+
+function openWeekDetail(key){
+  wkView='detail'; wkSelectedKey=key;
+  // default add-date to within this week (the Saturday, or today if current)
+  const di=document.getElementById('new-wk-date');
+  if(di){
+    const ws=new Date(key+'T00:00:00');
+    const today=new Date(); today.setHours(0,0,0,0);
+    const inWeek = wkKeyOf(wkWeekStart(wkKeyOf(today)))===key;
+    di.value = inWeek ? today.toISOString().slice(0,10) : key;
+  }
+  renderWajib();
+  renderWeekly();
+}
+function backToWeekList(){ wkView='list'; wkSelectedKey=null; closeForm('weekly-form'); renderWeekly(); }
+
+
+
+// ═══════════ WAJIB AL-WAQT ═══════════
+const DEFAULT_WAJIB = [
+  {id:'wj1', text:'ضبط الدخل — العمل في شركة جديدة جيدة والبدء في الفريلانس'},
+  {id:'wj2', text:'ساعتين من القرآن يومياً'},
+];
+
+let wajibData = (() => {
+  try {
+    const raw = localStorage.getItem('bw_wajib');
+    if(!raw || raw === '[object Object]') throw new Error();
+    const p = JSON.parse(raw);
+    if(!Array.isArray(p)) throw new Error();
+    return p;
+  } catch { return JSON.parse(JSON.stringify(DEFAULT_WAJIB)); }
+})();
+
+function saveWajib(){ localStorage.setItem('bw_wajib', JSON.stringify(wajibData)); }
+
+function addWajib(){
+  const text = document.getElementById('new-wajib')?.value.trim();
+  if(!text) return;
+  wajibData.push({id:Date.now()+'', text});
+  saveWajib();
+  document.getElementById('new-wajib').value='';
+  closeForm('wajib-form');
+  renderWajib();
+}
+
+function delWajib(id){
+  wajibData = wajibData.filter(w=>w.id!==id);
+  saveWajib(); renderWajib();
+}
+
+function renderWajib(){
+  const el = document.getElementById('wajib-list'); if(!el) return;
+  if(!wajibData.length){ el.innerHTML='<div style="font-size:12px;color:var(--text3)">لا توجد أولويات حالياً</div>'; return; }
+  let html = '';
+  wajibData.forEach(function(w, i){
+    html += '<div class="wajib-card">';
+    html += '<span class="wajib-num">' + (i+1) + '</span>';
+    html += '<span class="wajib-text">' + w.text + '</span>';
+    html += '<button class="wajib-del skill-del" onclick="delWajib(\'' + w.id + '\')">✕</button>';
     html += '</div>';
   });
   el.innerHTML = html;
