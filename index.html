@@ -651,6 +651,7 @@ body:not(.edit-mode) .identity-box{cursor:default!important;pointer-events:none!
     <div class="ibadah-item"><div class="ibadah-dot"></div><div class="ibadah-text">الخلوة — الانقطاع للعبادة والتفرغ التام لله</div></div>
     <div class="ibadah-item"><div class="ibadah-dot"></div><div class="ibadah-text">قراءة القرآن بالتدبر والاهتداء به</div></div>
     <div class="ibadah-item"><div class="ibadah-dot"></div><div class="ibadah-text">مركزة مركزيات الحي</div></div>
+    <div class="ibadah-item"><div class="ibadah-dot"></div><div class="ibadah-text">كل يوم حكمة سواء من القرآن أو من غيره حتى يمسّ الزيت النار فتضيء</div></div>
   </div>
 
   <div class="card">
@@ -1293,7 +1294,7 @@ const LS_DEFS = {
   {id:'dn7',text:'الانتهاء من العادة السرية نهائياً والتوبة منها',period:'أولوية قصوى',done:false},
   {id:'dn8',text:'الوفاء بالنذور',period:'واجب',done:false},
   {id:'dn9',text:'الاهتمام بالآخرة والأعمال التي ثوابها عظيم — وإن الحسنات يُذهبن السيئات',period:'مستمر',done:false},
-  {id:'dn10',text:'التوبة من الذنوب السابقة والطهارة منها ومن خواطرها: التوبة من الكفر والنفاق، والقول على الله بغير علم، والركون إلى الباطل وأهله، والرياء، والكبر، ومعارضة الدين بالعقل والالتفات إلى الظنون والشبهات. والتوبة من الزنا والتفكير فيه وخواطره وإعلامه. والتوبة من إرادة الخيانة والخسة. والتوبة أولاً من التكبر على الوالدين وعقوقهما',period:'أولوية قصوى',done:false}],
+  {id:'dn10',text:'التوبة من الذنوب السابقة والطهارة منها ومن خواطرها: التوبة من الكفر والنفاق، والقول على الله بغير علم، والركون إلى الباطل وأهله، والرياء، والكبر، ومعارضة الدين بالعقل والالتفات إلى الظنون والشبهات. والتوبة من الزنا والتفكير فيه وخواطره وإعلامه. والتوبة من إرادة الخيانة والخسة. والتوبة أولاً من التكبر على الوالدين وعقوقهما',period:'أولوية قصوى',done:false},{id:'dn11',text:'كل يوم حكمة سواء من القرآن أو من غيره حتى يمسّ الزيت النار فتضيء',period:'يومي',done:false}],
   bw_done_mihani:{}, bw_done_badani:{}, bw_done_asri:{},
   bw_ilmi:{domains:[]},
   bw_quotes:[],
@@ -1597,6 +1598,19 @@ window.addEventListener('DOMContentLoaded',()=>{
   } catch(e){
     localStorage.setItem('bw_wajib', JSON.stringify(DEFAULT_WAJIB));
   }
+
+
+  // Migration: quote dq3
+  try {
+    const rawQ3 = localStorage.getItem('bw_quotes');
+    let qArr3 = [];
+    if(rawQ3 && rawQ3 !== '[object Object]') { try { qArr3 = JSON.parse(rawQ3); } catch(e){} }
+    if(Array.isArray(qArr3) && !qArr3.find(q=>q.id==='dq3')){
+      qArr3.push({id:'dq3', text:"\u0644\u0645\u0627 \u062a\u0644\u0627\u0642\u064a\u0643 \u0645\u0634 \u0642\u0627\u062f\u0631 \u0639\u0644\u0649 \u0645\u0648\u0636\u0648\u0639 \u0627\u0644\u0631\u064a\u0627\u0621 \u0623\u0648 \u0641\u0634\u0644\u062a \u062a\u0634\u064a\u0644\u0647 \u2014 \u0645\u062a\u0642\u0646\u0651\u0639\u0634 \u0646\u0641\u0633\u0643 \u0625\u0646 \u0627\u0644\u0645\u0648\u0636\u0648\u0639 \u0643\u062f\u0647 \u0627\u062a\u062d\u0644 \u0639\u0634\u0627\u0646 \u062a\u0634\u064a\u0644 \u0627\u0644\u0623\u0644\u0645. \u0644\u0627\u060c \u0647\u0648 \u0645\u062a\u062d\u0644\u0651\u0634 \u0648\u0645\u062d\u062a\u0627\u062c \u0644\u0633\u0647 \u0645\u062c\u0627\u0647\u062f\u0629 \u0648\u062f\u0639\u0627\u0621 \u0648\u063a\u064a\u0631\u0647. \u0641\u0644\u0627 \u062a\u0644\u0628\u0651\u0633 \u0639\u0644\u0649 \u0646\u0641\u0633\u0643.", src:'تذكير لنفسي'});
+      localStorage.setItem('bw_quotes', JSON.stringify(qArr3));
+      quotesData = qArr3;
+    }
+  } catch(e){}
 
   // Migration: articles (safe)
   try {
@@ -2820,3 +2834,4 @@ function renderWajib(){
 </script>
 </body>
 </html>
+    ,{id:'dn11', text:'كل يوم حكمة سواء من القرآن أو من غيره حتى يمسّ الزيت النار فتضيء', period:'يومي', done:false}
